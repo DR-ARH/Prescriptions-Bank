@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>قلب و عروق | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>قلب و عروق</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_97193ddb595a.svg" alt="قلب و عروق">
+      <div>
+        <h1 class="header-title">قلب و عروق</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های قلب و عروق..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/121.html" class="item-card">
+              <img src="../images/img_618f31ed519e.jpg" alt="احیای بزرگسال">
+              <h3>احیای بزرگسال</h3>
+            </a>
+            
+            <a href="../prescriptions/122.html" class="item-card">
+              <img src="../images/img_9e2ba72b9331.jpg" alt="احیای اطفال">
+              <h3>احیای اطفال</h3>
+            </a>
+            
+            <a href="../prescriptions/123.html" class="item-card">
+              <img src="../images/img_c0e42732ca44.jpg" alt="تپش قلب">
+              <h3>تپش قلب</h3>
+            </a>
+            
+            <a href="../prescriptions/124.html" class="item-card">
+              <img src="../images/img_2ebbfa02e855.jpg" alt="فشار خون">
+              <h3>فشار خون</h3>
+            </a>
+            
+            <a href="../prescriptions/125.html" class="item-card">
+              <img src="../images/img_3b4e64f719c3.jpg" alt="برادی کاردی">
+              <h3>برادی کاردی</h3>
+            </a>
+            
+            <a href="../prescriptions/126.html" class="item-card">
+              <img src="../images/img_f3f180d994fe.jpg" alt="پریکاردیت">
+              <h3>پریکاردیت</h3>
+            </a>
+            
+            <a href="../prescriptions/127.html" class="item-card">
+              <img src="../images/img_867051ab1c78.jpg" alt="بلوک درجه ۲،۳">
+              <h3>بلوک درجه ۲،۳</h3>
+            </a>
+            
+            <a href="../prescriptions/128.html" class="item-card">
+              <img src="../images/img_66b9d3559bcc.jpg" alt="فلاتر دهلیزی">
+              <h3>فلاتر دهلیزی</h3>
+            </a>
+            
+            <a href="../prescriptions/129.html" class="item-card">
+              <img src="../images/img_732248c4ccd7.jpg" alt="تاکی کاردی سینوسی">
+              <h3>تاکی کاردی سینوسی</h3>
+            </a>
+            
+            <a href="../prescriptions/130.html" class="item-card">
+              <img src="../images/img_db448700a254.jpg" alt="PSVT">
+              <h3>PSVT</h3>
+            </a>
+            
+            <a href="../prescriptions/131.html" class="item-card">
+              <img src="../images/img_907b6a270d6d.jpg" alt="فییریلاسیون دهلیزی">
+              <h3>فییریلاسیون دهلیزی</h3>
+            </a>
+            
+            <a href="../prescriptions/132.html" class="item-card">
+              <img src="../images/img_887366d00e7f.jpg" alt="تاکی کاردی بطنی">
+              <h3>تاکی کاردی بطنی</h3>
+            </a>
+            
+            <a href="../prescriptions/133.html" class="item-card">
+              <img src="../images/img_0e210f866fad.jpg" alt="PVC">
+              <h3>PVC</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

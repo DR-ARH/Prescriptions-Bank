@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>اورولوژی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>اورولوژی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_f41a6d9d7c3c.svg" alt="اورولوژی">
+      <div>
+        <h1 class="header-title">اورولوژی</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های اورولوژی..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/145.html" class="item-card">
+              <img src="../images/img_611150d11032.jpg" alt="پیلونفریت">
+              <h3>پیلونفریت</h3>
+            </a>
+            
+            <a href="../prescriptions/146.html" class="item-card">
+              <img src="../images/img_5711d39b746b.jpg" alt="اورتریت حاد">
+              <h3>اورتریت حاد</h3>
+            </a>
+            
+            <a href="../prescriptions/147.html" class="item-card">
+              <img src="../images/img_f2359936551e.jpg" alt="اپیدیدیمیت">
+              <h3>اپیدیدیمیت</h3>
+            </a>
+            
+            <a href="../prescriptions/148.html" class="item-card">
+              <img src="../images/img_2e5f687faf76.jpg" alt="هرپس ژنیتال">
+              <h3>هرپس ژنیتال</h3>
+            </a>
+            
+            <a href="../prescriptions/149.html" class="item-card">
+              <img src="../images/img_206fe6cccf58.jpg" alt="پروستاتیت">
+              <h3>پروستاتیت</h3>
+            </a>
+            
+            <a href="../prescriptions/150.html" class="item-card">
+              <img src="../images/img_60661435794b.jpg" alt="اختلال نعوظ">
+              <h3>اختلال نعوظ</h3>
+            </a>
+            
+            <a href="../prescriptions/151.html" class="item-card">
+              <img src="../images/img_65292e0ffac6.jpg" alt="زودانزالی">
+              <h3>زودانزالی</h3>
+            </a>
+            
+            <a href="../prescriptions/152.html" class="item-card">
+              <img src="../images/img_1362f5ebfa33.jpg" alt="تورشن بیضه">
+              <h3>تورشن بیضه</h3>
+            </a>
+            
+            <a href="../prescriptions/153.html" class="item-card">
+              <img src="../images/img_6ef0999e5e2f.jpg" alt="سیستیت">
+              <h3>سیستیت</h3>
+            </a>
+            
+            <a href="../prescriptions/154.html" class="item-card">
+              <img src="../images/img_9426ae5fef44.jpg" alt="شانکرویید">
+              <h3>شانکرویید</h3>
+            </a>
+            
+            <a href="../prescriptions/155.html" class="item-card">
+              <img src="../images/img_1dda4a5cd874.jpg" alt="سیفلیس">
+              <h3>سیفلیس</h3>
+            </a>
+            
+            <a href="../prescriptions/156.html" class="item-card">
+              <img src="../images/img_40b0d8863d66.jpg" alt="BPH">
+              <h3>BPH</h3>
+            </a>
+            
+            <a href="../prescriptions/301.html" class="item-card">
+              <img src="../images/img_3ca1e2bf90af.jpg" alt="بی اختیاری ادرار">
+              <h3>بی اختیاری ادرار</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

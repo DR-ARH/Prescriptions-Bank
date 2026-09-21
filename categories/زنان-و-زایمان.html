@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>زنان و زایمان | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>زنان و زایمان</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_d05bb6c6b462.svg" alt="زنان و زایمان">
+      <div>
+        <h1 class="header-title">زنان و زایمان</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های زنان و زایمان..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/281.html" class="item-card">
+              <img src="../images/img_31c636c50c31.jpg" alt="افسردگی بعد از زایمان">
+              <h3>افسردگی بعد از زایمان</h3>
+            </a>
+            
+            <a href="../prescriptions/283.html" class="item-card">
+              <img src="../images/img_5f954778f96f.png" alt="دیابت در بارداری">
+              <h3>دیابت در بارداری</h3>
+            </a>
+            
+            <a href="../prescriptions/284.html" class="item-card">
+              <img src="../images/img_a9a59419482a.jpg" alt="فشارخون در بارداری">
+              <h3>فشارخون در بارداری</h3>
+            </a>
+            
+            <a href="../prescriptions/285.html" class="item-card">
+              <img src="../images/img_e2edac487bf8.jpg" alt="Dyspareunia">
+              <h3>Dyspareunia</h3>
+            </a>
+            
+            <a href="../prescriptions/286.html" class="item-card">
+              <img src="../images/img_ef34ca1ccede.jpg" alt="Dysmenorrhea">
+              <h3>Dysmenorrhea</h3>
+            </a>
+            
+            <a href="../prescriptions/287.html" class="item-card">
+              <img src="../images/img_3567e26b0eeb.jpg" alt="NV in Pregnancy">
+              <h3>NV in Pregnancy</h3>
+            </a>
+            
+            <a href="../prescriptions/288.html" class="item-card">
+              <img src="../images/img_e982dc1562a7.jpg" alt="Asymptomatic Bacteriuria in Pregnancy">
+              <h3>Asymptomatic Bacteriuria in Pregnancy</h3>
+            </a>
+            
+            <a href="../prescriptions/289.html" class="item-card">
+              <img src="../images/img_a1885b672d6a.jpg" alt="Hemorrhoid in Pregnancy">
+              <h3>Hemorrhoid in Pregnancy</h3>
+            </a>
+            
+            <a href="../prescriptions/290.html" class="item-card">
+              <img src="../images/img_fbe846dd2494.jpg" alt="Constipation in Pregnancy">
+              <h3>Constipation in Pregnancy</h3>
+            </a>
+            
+            <a href="../prescriptions/309.html" class="item-card">
+              <img src="../images/img_f5f25ec15f67.jpg" alt="واژینیت باکتریال">
+              <h3>واژینیت باکتریال</h3>
+            </a>
+            
+            <a href="../prescriptions/310.html" class="item-card">
+              <img src="../images/img_44bac14ed2fb.jpg" alt="واژینیت تریکومونایی">
+              <h3>واژینیت تریکومونایی</h3>
+            </a>
+            
+            <a href="../prescriptions/311.html" class="item-card">
+              <img src="../images/img_c2ee8490e01d.jpg" alt="ولوواژینیت قارچی">
+              <h3>ولوواژینیت قارچی</h3>
+            </a>
+            
+            <a href="../prescriptions/312.html" class="item-card">
+              <img src="../images/img_9043fa2f492a.jpg" alt="واژینیت آتروفیک">
+              <h3>واژینیت آتروفیک</h3>
+            </a>
+            
+            <a href="../prescriptions/314.html" class="item-card">
+              <img src="../images/img_61a61991a69a.jpg" alt="سرویسیت">
+              <h3>سرویسیت</h3>
+            </a>
+            
+            <a href="../prescriptions/315.html" class="item-card">
+              <img src="../images/img_c79372470fc9.jpg" alt="شقاق پستان">
+              <h3>شقاق پستان</h3>
+            </a>
+            
+            <a href="../prescriptions/316.html" class="item-card">
+              <img src="../images/img_e4815c6b893a.jpg" alt="غربالگری سرطان سرویکس">
+              <h3>غربالگری سرطان سرویکس</h3>
+            </a>
+            
+            <a href="../prescriptions/317.html" class="item-card">
+              <img src="../images/img_5b12affd5e2c.jpg" alt="ماستیت">
+              <h3>ماستیت</h3>
+            </a>
+            
+            <a href="../prescriptions/319.html" class="item-card">
+              <img src="../images/img_8eaa04a3561a.jpg" alt="غربالگری سرطان پستان">
+              <h3>غربالگری سرطان پستان</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

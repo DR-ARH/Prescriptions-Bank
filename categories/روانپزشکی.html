@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>روانپزشکی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>روانپزشکی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_801e0602bec2.svg" alt="روانپزشکی">
+      <div>
+        <h1 class="header-title">روانپزشکی</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های روانپزشکی..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/2.html" class="item-card">
+              <img src="../images/img_bda26c456c62.png" alt="افسردگی">
+              <h3>افسردگی</h3>
+            </a>
+            
+            <a href="../prescriptions/3.html" class="item-card">
+              <img src="../images/img_511cf0ca8aef.jpg" alt="اضطراب">
+              <h3>اضطراب</h3>
+            </a>
+            
+            <a href="../prescriptions/291.html" class="item-card">
+              <img src="../images/img_7bb46dc58380.jpg" alt="OCD">
+              <h3>OCD</h3>
+            </a>
+            
+            <a href="../prescriptions/292.html" class="item-card">
+              <img src="../images/img_3af18e9b4630.png" alt="بی خوابی">
+              <h3>بی خوابی</h3>
+            </a>
+            
+            <a href="../prescriptions/293.html" class="item-card">
+              <img src="../images/img_b6fb008f01a9.jpg" alt="لکنت زبان">
+              <h3>لکنت زبان</h3>
+            </a>
+            
+            <a href="../prescriptions/294.html" class="item-card">
+              <img src="../images/img_4448faf5997f.jpg" alt="ناخن جویدن">
+              <h3>ناخن جویدن</h3>
+            </a>
+            
+            <a href="../prescriptions/295.html" class="item-card">
+              <img src="../images/img_915d415b5d93.jpg" alt="سنذوم پای بی قرار">
+              <h3>سنذوم پای بی قرار</h3>
+            </a>
+            
+            <a href="../prescriptions/296.html" class="item-card">
+              <img src="../images/img_b8b3872b53e9.jpg" alt="ترک سیگار">
+              <h3>ترک سیگار</h3>
+            </a>
+            
+            <a href="../prescriptions/297.html" class="item-card">
+              <img src="../images/img_0588bd83e1f9.jpg" alt="Panic">
+              <h3>Panic</h3>
+            </a>
+            
+            <a href="../prescriptions/298.html" class="item-card">
+              <img src="../images/img_bcd3be47a003.jpg" alt="کابوس شبانه">
+              <h3>کابوس شبانه</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

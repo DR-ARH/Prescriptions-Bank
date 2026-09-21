@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>چشم | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>چشم</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_8e4cc914ac35.svg" alt="چشم">
+      <div>
+        <h1 class="header-title">چشم</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های چشم..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/134.html" class="item-card">
+              <img src="../images/img_591050bdf378.jpg" alt="بلفاریت">
+              <h3>بلفاریت</h3>
+            </a>
+            
+            <a href="../prescriptions/135.html" class="item-card">
+              <img src="../images/img_7c4f118c3f13.jpg" alt="پلیسه">
+              <h3>پلیسه</h3>
+            </a>
+            
+            <a href="../prescriptions/136.html" class="item-card">
+              <img src="../images/img_ed3398ecfce2.jpg" alt="داکروسیستیت">
+              <h3>داکروسیستیت</h3>
+            </a>
+            
+            <a href="../prescriptions/137.html" class="item-card">
+              <img src="../images/img_b71ac7df82f7.jpg" alt="خشکی چشم">
+              <h3>خشکی چشم</h3>
+            </a>
+            
+            <a href="../prescriptions/138.html" class="item-card">
+              <img src="../images/img_fe90b335e176.jpg" alt="سوختگی شیمیایی">
+              <h3>سوختگی شیمیایی</h3>
+            </a>
+            
+            <a href="../prescriptions/139.html" class="item-card">
+              <img src="../images/img_fadc1bb60f3b.jpg" alt="شالازیون">
+              <h3>شالازیون</h3>
+            </a>
+            
+            <a href="../prescriptions/140.html" class="item-card">
+              <img src="../images/img_55c69f74f247.jpg" alt="کونژکتیویت آلرژیک">
+              <h3>کونژکتیویت آلرژیک</h3>
+            </a>
+            
+            <a href="../prescriptions/141.html" class="item-card">
+              <img src="../images/img_894ab3e00e9e.jpg" alt="کونژکتیویت ویروسی">
+              <h3>کونژکتیویت ویروسی</h3>
+            </a>
+            
+            <a href="../prescriptions/142.html" class="item-card">
+              <img src="../images/img_61dd97327a30.jpg" alt="کونژکتیویت باکتریال">
+              <h3>کونژکتیویت باکتریال</h3>
+            </a>
+            
+            <a href="../prescriptions/143.html" class="item-card">
+              <img src="../images/img_a8bdea9b49e8.jpg" alt="هوردئولوم">
+              <h3>هوردئولوم</h3>
+            </a>
+            
+            <a href="../prescriptions/144.html" class="item-card">
+              <img src="../images/img_d6cc1fc7e0ed.jpg" alt="UVکراتیت">
+              <h3>UVکراتیت</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

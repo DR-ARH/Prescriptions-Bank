@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>عفونی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>عفونی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_399463044d28.svg" alt="عفونی">
+      <div>
+        <h1 class="header-title">عفونی</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های عفونی..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/91.html" class="item-card">
+              <img src="../images/img_f0a619e015e8.jpg" alt="آبسه دندان">
+              <h3>آبسه دندان</h3>
+            </a>
+            
+            <a href="../prescriptions/92.html" class="item-card">
+              <img src="../images/img_34b05b355a5c.jpg" alt="اوریون">
+              <h3>اوریون</h3>
+            </a>
+            
+            <a href="../prescriptions/93.html" class="item-card">
+              <img src="../images/img_3d5328b14999.jpg" alt="تب مالت">
+              <h3>تب مالت</h3>
+            </a>
+            
+            <a href="../prescriptions/94.html" class="item-card">
+              <img src="../images/img_ac234cd293b3.jpg" alt="پنومونی">
+              <h3>پنومونی</h3>
+            </a>
+            
+            <a href="../prescriptions/95.html" class="item-card">
+              <img src="../images/img_bb7881316c21.jpg" alt="تب کریمه کونگو">
+              <h3>تب کریمه کونگو</h3>
+            </a>
+            
+            <a href="../prescriptions/96.html" class="item-card">
+              <img src="../images/img_03f77cca8b05.jpg" alt="زرده زخم">
+              <h3>زرده زخم</h3>
+            </a>
+            
+            <a href="../prescriptions/97.html" class="item-card">
+              <img src="../images/img_61029387bcac.jpg" alt="سیاه زخم">
+              <h3>سیاه زخم</h3>
+            </a>
+            
+            <a href="../prescriptions/98.html" class="item-card">
+              <img src="../images/img_e635031aa386.jpg" alt="توبرکلوز (سل)">
+              <h3>توبرکلوز (سل)</h3>
+            </a>
+            
+            <a href="../prescriptions/100.html" class="item-card">
+              <img src="../images/img_cd3591967ad3.jpg" alt="کزاز">
+              <h3>کزاز</h3>
+            </a>
+            
+            <a href="../prescriptions/101.html" class="item-card">
+              <img src="../images/img_cc1a23b9c505.jpg" alt="گاز گرفتگی">
+              <h3>گاز گرفتگی</h3>
+            </a>
+            
+            <a href="../prescriptions/102.html" class="item-card">
+              <img src="../images/img_e39274b328bd.jpg" alt="نیدل استیک">
+              <h3>نیدل استیک</h3>
+            </a>
+            
+            <a href="../prescriptions/103.html" class="item-card">
+              <img src="../images/img_f1fdaad8c3ee.jpg" alt="وبا">
+              <h3>وبا</h3>
+            </a>
+            
+            <a href="../prescriptions/104.html" class="item-card">
+              <img src="../images/img_fc69e4becb79.jpg" alt="هرپس">
+              <h3>هرپس</h3>
+            </a>
+            
+            <a href="../prescriptions/105.html" class="item-card">
+              <img src="../images/img_0b9ac834cccd.jpg" alt="زونا">
+              <h3>زونا</h3>
+            </a>
+            
+            <a href="../prescriptions/106.html" class="item-card">
+              <img src="../images/img_14f849ed0f0e.jpg" alt="فارنژیت">
+              <h3>فارنژیت</h3>
+            </a>
+            
+            <a href="../prescriptions/305.html" class="item-card">
+              <img src="../images/img_a55a2f619427.jpg" alt="میازیس">
+              <h3>میازیس</h3>
+            </a>
+            
+            <a href="../prescriptions/320.html" class="item-card">
+              <img src="../images/img_5bceb9209628.jpg" alt="هیدرآنیت چرکی">
+              <h3>هیدرآنیت چرکی</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

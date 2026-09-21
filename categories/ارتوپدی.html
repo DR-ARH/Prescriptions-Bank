@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ارتوپدی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>ارتوپدی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_61173b26e9e8.svg" alt="ارتوپدی">
+      <div>
+        <h1 class="header-title">ارتوپدی</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های ارتوپدی..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/265.html" class="item-card">
+              <img src="../images/img_656fb842ad01.jpg" alt="بورسیت">
+              <h3>بورسیت</h3>
+            </a>
+            
+            <a href="../prescriptions/266.html" class="item-card">
+              <img src="../images/img_404aa3086ce1.jpg" alt="اپی کوندیلیت">
+              <h3>اپی کوندیلیت</h3>
+            </a>
+            
+            <a href="../prescriptions/267.html" class="item-card">
+              <img src="../images/img_e1f08d040ebc.jpg" alt="استئوآرتریت">
+              <h3>استئوآرتریت</h3>
+            </a>
+            
+            <a href="../prescriptions/268.html" class="item-card">
+              <img src="../images/img_c9eb9e2ecac5.jpg" alt="استئوپروزیس">
+              <h3>استئوپروزیس</h3>
+            </a>
+            
+            <a href="../prescriptions/269.html" class="item-card">
+              <img src="../images/img_c7b10d7e3494.jpg" alt="سندروم تونل کارپال">
+              <h3>سندروم تونل کارپال</h3>
+            </a>
+            
+            <a href="../prescriptions/270.html" class="item-card">
+              <img src="../images/img_bf043d579a49.jpg" alt="گرافی های  پرکاربرد">
+              <h3>گرافی های  پرکاربرد</h3>
+            </a>
+            
+            <a href="../prescriptions/271.html" class="item-card">
+              <img src="../images/img_29e0f87baec7.jpg" alt="ترومای زانو">
+              <h3>ترومای زانو</h3>
+            </a>
+            
+            <a href="../prescriptions/272.html" class="item-card">
+              <img src="../images/img_99add2c3cf26.jpg" alt="تروما مچ پا">
+              <h3>تروما مچ پا</h3>
+            </a>
+            
+            <a href="../prescriptions/273.html" class="item-card">
+              <img src="../images/img_4021e9728adc.jpg" alt="شکستگی پاشنه">
+              <h3>شکستگی پاشنه</h3>
+            </a>
+            
+            <a href="../prescriptions/274.html" class="item-card">
+              <img src="../images/img_6d282e570b0e.jpg" alt="ترومای پا">
+              <h3>ترومای پا</h3>
+            </a>
+            
+            <a href="../prescriptions/275.html" class="item-card">
+              <img src="../images/img_0cb091b95ed5.jpg" alt="تروما  لگن">
+              <h3>تروما  لگن</h3>
+            </a>
+            
+            <a href="../prescriptions/276.html" class="item-card">
+              <img src="../images/img_d0b4b60d488a.jpg" alt="شکستگی گردن فمور">
+              <h3>شکستگی گردن فمور</h3>
+            </a>
+            
+            <a href="../prescriptions/277.html" class="item-card">
+              <img src="../images/img_80aec1a53a96.jpg" alt="دررفتگی شانه">
+              <h3>دررفتگی شانه</h3>
+            </a>
+            
+            <a href="../prescriptions/278.html" class="item-card">
+              <img src="../images/img_3a3270acc9d4.jpg" alt="شکستگی کلاویکل">
+              <h3>شکستگی کلاویکل</h3>
+            </a>
+            
+            <a href="../prescriptions/279.html" class="item-card">
+              <img src="../images/img_48a02e70f32f.jpg" alt="تروما آرنج">
+              <h3>تروما آرنج</h3>
+            </a>
+            
+            <a href="../prescriptions/280.html" class="item-card">
+              <img src="../images/img_a9816cf30ccc.jpg" alt="تروما دست">
+              <h3>تروما دست</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>نورولوژی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>نورولوژی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_2b044b8b2afc.svg" alt="نورولوژی">
+      <div>
+        <h1 class="header-title">نورولوژی</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های نورولوژی..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/17.html" class="item-card">
+              <img src="../images/img_8287f97358af.png" alt="تشنج">
+              <h3>تشنج</h3>
+            </a>
+            
+            <a href="../prescriptions/157.html" class="item-card">
+              <img src="../images/img_7f9688f31fd4.jpg" alt="سردرد تنشن">
+              <h3>سردرد تنشن</h3>
+            </a>
+            
+            <a href="../prescriptions/158.html" class="item-card">
+              <img src="../images/img_418c1e7587fe.jpg" alt="میگرن">
+              <h3>میگرن</h3>
+            </a>
+            
+            <a href="../prescriptions/159.html" class="item-card">
+              <img src="../images/img_6f151ff3d709.jpg" alt="آرتریت تمپورال">
+              <h3>آرتریت تمپورال</h3>
+            </a>
+            
+            <a href="../prescriptions/160.html" class="item-card">
+              <img src="../images/img_0fb3b230e97c.jpg" alt="سردرد خوشه ای">
+              <h3>سردرد خوشه ای</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>
