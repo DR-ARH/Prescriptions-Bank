@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ناخن جویدن | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/روانپزشکی.html">روانپزشکی</a>
+    <span>›</span>
+    <span>ناخن جویدن</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_4448faf5997f.jpg" alt="ناخن جویدن">
+      <div>
+        <h1 class="header-title">ناخن جویدن</h1>
+      </div>
+    </div>
+    <a href="../categories/روانپزشکی.html" class="btn-back">← بازگشت به روانپزشکی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="right"><span lang="FA" style='font-family:"Arial",sans-serif;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-bidi;
+mso-bidi-language:FA'>راهکارهای غیر دارویی موثرتر است. از طریق شرطی سازی
+وتشویقی به نتیجه‌ی بهتری میرسید. از طرفی داروی‌های اعصاب و روان در جامعه‌ی ما
+خیلی پذیرفته شده نیست و جویدن ناخن یک رفتار عادتی است و با پرهیز ازش قابل درمان
+است. توصیه به درمان دارویی نمیکنم اما اگر خواستین دارویی بدین: </span><span dir="LTR" style="mso-bidi-language:FA"></span></p><p alignment="left"><span style="mso-bidi-language:
+FA">Rx</span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL" lang="FA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-theme-font:minor-bidi;mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span>: </span><span style="mso-bidi-language:FA"></span></p><p alignment="left"><span style="mso-bidi-language:
+FA">1.Cap Fluoxetine 10mg<span style="mso-spacerun:yes">  </span>N=30<span style="mso-spacerun:yes">  </span>daily</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ لیکن پلان<br/>2️⃣ پسوریازیس<br/>3️⃣ تروما<br/>4️⃣ اونیکومایکوزیس<br/>5️⃣ پارونیشیا مزمن<br/>6️⃣ Onychotillomania</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

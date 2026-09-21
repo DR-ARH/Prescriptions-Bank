@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Constipation in Pregnancy | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>Constipation in Pregnancy</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_fbe846dd2494.jpg" alt="Constipation in Pregnancy">
+      <div>
+        <h1 class="header-title">Constipation in Pregnancy</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><font style="color: rgb(255, 19, 0);"></font>Constipation
+in Pregnancy<span dir="LTR" style="mso-bidi-language:FA"></span></p><ol alignment="left"><li alignment="left"><span style="mso-bidi-language:FA">Susp MOM<span style="mso-spacerun:yes"> 
+     </span>N=1<span style="mso-spacerun:yes">  </span>30cc q12h</span></li></ol><p alignment="left"><span style="mso-bidi-language:
+FA">Or Syrup Lactulose<span style="mso-spacerun:yes">   </span>N=1<span style="mso-spacerun:yes">  </span>15cc<span style="mso-spacerun:yes"> 
+</span>q12h</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ <font style="color: rgb(255, 19, 0);"><b>بیماری های داخلی</b></font><br/></p><p alignment="right">    ✔️روماتولوژیک : لوپوس ، اسکلرودرمی<br/>    ✔️غدد :دیابت ، هایپوتیروئدیسم ،              هایپرپاراتیروئیدیسم<br/></p><p alignment="right">    ✔️اورمی<br/>    ✔️IBS و IBD<br/>    ✔️مسمومیت با سرب<br/><br/>2️⃣ <font style="color: rgb(255, 19, 0);"><b>بیماری های جراحی</b></font><br/></p><p alignment="right">    ✔️ایلئوس<br/>    ✔️ انسداد روده<br/>    ✔️ ولولوس<br/>    ✔️دیورتیکولیت<br/><br/>3️⃣<b><font style="color: rgb(255, 19, 0);"> بیماری های سایکولوژیک</font></b><br/>    ✔️ اختلال اضطرابی<br/>    ✔️ افسردگی<br/><br/><font style="color: rgb(255, 19, 0);"><b>4️⃣ بیماری های نورولوژیک</b></font><br/>    ✔️ نوروپاتی<br/>    ✔️ پارکینسون<br/>    ✔️ MS<br/>    ✔️آسیب طناب نخاعی</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

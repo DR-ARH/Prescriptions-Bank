@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>لارنژیت حاد | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ent.html">ENT</a>
+    <span>›</span>
+    <span>لارنژیت حاد</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_202504a9e428.jpg" alt="لارنژیت حاد">
+      <div>
+        <h1 class="header-title">لارنژیت حاد</h1>
+      </div>
+    </div>
+    <a href="../categories/ent.html" class="btn-back">← بازگشت به ENT</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="right">التهاب حاد تار های صوتی هست که معمولا بین سن ۱۸ تا ۴۰ سال به دنبال URI ممکنه رخ بده.</p><p alignment="right">اگر زیر ۳ هفته باشه حاد و اگر بالای ۳ هفته باشه مزمن هست که باید بررسی بیشتری صورت بگیره<br/><br/></p><p alignment="right"><font style="color: rgb(156, 39, 176);">درمان :</font></p><p alignment="right">بیماری خود محدود شونده ست و معمولا ظرف ۳ تا ۷ روز بهبود پیدا میکنه.</p><p alignment="right">توصیه های درمانی که می تونید پیشنهاد بدید :</p><p alignment="right">🔸 استفاده از بخور و هوای مرطوب<br/>🔸 Complete voice rest یعنی سعی کنه اصلا صحبت نکنه یا اگر مجبور هست با تون پایین صحبت کنه که تار های صوتی استراحت داشته باشن<br/>🔸 قطع مصرف سیگار و مواجهه به گاز های شیمیایی<br/>🔸 پرهیز از مصرف قهوه ، شکلات و غذای چرب و ادویه جات و توصیه به مصرف مایعات ولرم زیاد<br/></p><p alignment="right">🔸 درمان دارویی کمک کننده : PPI برای رفع رفلاکس ، مسکن ، موکولیتیک</p><p alignment="right"><br/>Rx :</p><p alignment="right"><font style="color: rgb(255, 0, 0);">1. </font>Tab Pantoprazol 40 mg daily<br/><font style="color: rgb(255, 0, 0);">2.</font> Tab Acetaminophen or Ibuprofen bd<br/></p><p alignment="right"><font style="color: rgb(255, 0, 0);">3.</font> Syrup Guaifenesin or Eff NAC </p><p alignment="right"><font style="color: rgb(3, 169, 244);">نکته :</font> استفاده از آنتی بیوتیک و کورتون در موارد خفیف و معمول توصیه نمی شود<br/><br/><font style="color: rgb(3, 169, 244);">نکته :</font> استفاده از آنتی هیستامین ها توصیه نشده است. <br/></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">در کنار علائم URI مثل تب و سرفه و رینیت می تواند :</p><p alignment="right">✳️خشونت صدا<br/>✳️سختی یا درد در هنگام صحبت<br/>✳️سرفه خشک<br/>✳️خشکی گلو و گلو درد<br/></p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ URI<br/>2️⃣ اپیگلوتیت<br/>3️⃣ لارنژیت مزمن آلرژیک یا عفونی<br/>Reflux laryngitis 4️⃣<br/>Spasmodic Dysphonia 5️⃣<br/>6️⃣ ندول یا پولیپ تار صوتی <br/>7️⃣ نئوپلاسم</p><p alignment="right"><br/></p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_857867980e37.jpg" target="_blank"><img src="../images/img_857867980e37.jpg" alt="لارنژیت حاد"></a></div><div class="gallery-card"><a href="../images/img_73cc8afa8964.jpg" target="_blank"><img src="../images/img_73cc8afa8964.jpg" alt="لارنژیت حاد"></a></div><div class="gallery-card"><a href="../images/img_3d318f7a0273.jpg" target="_blank"><img src="../images/img_3d318f7a0273.jpg" alt="لارنژیت حاد"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

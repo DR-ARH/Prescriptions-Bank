@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>واژینیت باکتریال | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>واژینیت باکتریال</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_f5f25ec15f67.jpg" alt="واژینیت باکتریال">
+      <div>
+        <h1 class="header-title">واژینیت باکتریال</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (2)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center">Bacterial vaginosis<br/></p><p alignment="left">Rx :</p><p alignment="left">Tab Metronidazole 500mg  N=14 BD for 7 days🔸<br/><br/>Cap Clindamycin 300mg  N=14 BD for 7days🔹</p><p alignment="left">Tab Tinidazole 500mg N= 10🔸 <br/>4tab(2gr) daily for 2 days or<br/>2tab(1gr) daily for 5 days<br/></p><p alignment="left">Vaginal gel Metronidazole daily for 5days 🔹<br/><br/>Vaginal cream Clindamycin qhs for 7days🔸 </p><p alignment="left">Vaginal tab Clindamycin 100mg qhs for 3 days🔹<br/></p><p alignment="right">هر کدام از رژیم های دارویی فوق را میتوان برای بیمار استفاده کرد<br/></p><p alignment="right"><font style="color: rgb(3, 169, 244);">نکته : </font>کلیندامایسین و مترونیدازول هر دو در دوران بارداری safe هستند.</p><p alignment="right"><font style="color: rgb(3, 169, 244);">نکته :</font> در خانم های شیرده، حین درمان با قرص مترونیدازول تا ۲۴ ساعت بعد از آخرین دوز از شیردهی کودک خودداری شود. پس ترجیحا از درمان موضعی استفاده کنید<br/><br/></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">ترشحات هموژن و رقیق به رنگ سفید مایل به خاکستری.<br/><br/><b><font style="color: rgb(103, 58, 183);">شکایات شایع بیماران:</font></b></p><p alignment="right">✳️شایع ترین :بوی ماهی فاسد یا کپک که بعد از رابطه جنسی بدبو تر می شود<br/>✳️خروج ترشحات سفید - خاکستری<br/>✳️دیزوری<br/>✳️دیسپارونی<br/>✳️خارش<br/>✳️گاها می تواند بی علامت هم باشد</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ واژینیت کاندیدایی<br/>2️⃣ واژینیت تریکومونایی<br/>3️⃣ واژینیت آتروفیک<br/>4️⃣ سرویسیت<br/>5️⃣ گونوره<br/>6️⃣ هرپس سیمپلکس<br/>7️⃣ عفونت کلامیدیایی<br/>Mechanical or chemical irritation 8️⃣<br/>9️⃣ جسم خارجی<br/>🔟 ترشحات طبیعی<br/>1️⃣1️⃣ PID<br/>1️⃣2️⃣ UTI<br/><br/><br/></p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_ae536ca4ac36.jpg" target="_blank"><img src="../images/img_ae536ca4ac36.jpg" alt="واژینیت باکتریال"></a></div><div class="gallery-card"><a href="../images/img_7ff11e710c0e.jpg" target="_blank"><img src="../images/img_7ff11e710c0e.jpg" alt="واژینیت باکتریال"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

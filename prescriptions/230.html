@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>عرق سوز | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/پوست-و-مو.html">پوست و مو</a>
+    <span>›</span>
+    <span>عرق سوز</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_5396dbd4c86b.jpg" alt="عرق سوز">
+      <div>
+        <h1 class="header-title">عرق سوز</h1>
+      </div>
+    </div>
+    <a href="../categories/پوست-و-مو.html" class="btn-back">← بازگشت به پوست و مو</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="left"><span style="color:red">Rx</span></p><p alignment="left"><span style="color:red">1.</span>Lotion Calamine-D<span style="mso-spacerun:yes">  </span>N=1 <span style="color:#00B050"><span style="mso-spacerun:yes"> </span>q12h</span></p><p alignment="left"><span style="color:red">2.</span>Tab Vit C<span style="mso-spacerun:yes">  </span>N=30<span style="mso-spacerun:yes">   </span><span style="color:#00B050">daily</span></p><p alignment="left"><span style="color:red">3.</span>Tab Hydroxyzine25mg N=20 <span style="color:#00B050">q12h</span></p><p alignment="right"><span lang="FA" style='mso-ansi-font-size:12.0pt;line-height:107%;
+font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";color:red;
+mso-bidi-language:FA'>نکته: </span><span lang="AR-SA" style='mso-ansi-font-size:
+12.0pt;line-height:107%;font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";
+color:#4472C4;mso-themecolor:accent1'>توصیه به خشک نگه داشتن محل </span></p><p alignment="right"><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:107%;
+font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";color:red'>نکته:
+</span><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:107%;
+font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";color:#4472C4;
+mso-themecolor:accent1'>استفاده از لباس های گشاد و نخی که تهویه مناسب تری داشته
+باشد.</span></p><p alignment="right"><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:107%;
+font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";color:red'>نکته:
+</span><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:107%;
+font-family:"B Nazanin";mso-fareast-font-family:"Times New Roman";color:#4472C4;
+mso-themecolor:accent1'>استفاده از هیدروکورتیزون موضعی ممکنه سبب نازک شدن پوست
+بشه. </span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣سلولیت<br/>2️⃣اریتراسما<br/>3️⃣اگزما<br/>4️⃣درماتیت تماسی <br/>5️⃣درماتیت سبورئیک<br/>Impetigo6️⃣ <br/>inverse psoriasis7️⃣ <br/>8️⃣گال<br/>Acanthosis Nigricans9️⃣ <br/>🔟 دیاپر راش</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_d16b8ef91709.jpg" target="_blank"><img src="../images/img_d16b8ef91709.jpg" alt="عرق سوز"></a></div><div class="gallery-card"><a href="../images/img_824e6175eeae.jpg" target="_blank"><img src="../images/img_824e6175eeae.jpg" alt="عرق سوز"></a></div><div class="gallery-card"><a href="../images/img_68027b649045.jpg" target="_blank"><img src="../images/img_68027b649045.jpg" alt="عرق سوز"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

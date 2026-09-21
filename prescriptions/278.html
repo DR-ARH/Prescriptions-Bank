@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>شکستگی کلاویکل | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ارتوپدی.html">ارتوپدی</a>
+    <span>›</span>
+    <span>شکستگی کلاویکل</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_3a3270acc9d4.jpg" alt="شکستگی کلاویکل">
+      <div>
+        <h1 class="header-title">شکستگی کلاویکل</h1>
+      </div>
+    </div>
+    <a href="../categories/ارتوپدی.html" class="btn-back">← بازگشت به ارتوپدی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>شکستگی کلاویکل</b></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'>شکستگی
+بیشتر در یک سوم میانی رخ<span style="mso-spacerun:yes">  </span>میدهد، درمان
+جا اندازی(نیازی نیست جا اندازی دقیق باشد.) شکستگی بصورت غیرجراحی است، و بی حرکتی
+به مدت یک ماه است. </span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_ae055a653262.jpg" target="_blank"><img src="../images/img_ae055a653262.jpg" alt="شکستگی کلاویکل"></a></div><div class="gallery-card"><a href="../images/img_b5e9c23fa100.jpg" target="_blank"><img src="../images/img_b5e9c23fa100.jpg" alt="شکستگی کلاویکل"></a></div><div class="gallery-card"><a href="../images/img_dce1021df93a.jpg" target="_blank"><img src="../images/img_dce1021df93a.jpg" alt="شکستگی کلاویکل"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>پتریازیس روزه آ | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/پوست-و-مو.html">پوست و مو</a>
+    <span>›</span>
+    <span>پتریازیس روزه آ</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_d37da93dd204.jpg" alt="پتریازیس روزه آ">
+      <div>
+        <h1 class="header-title">پتریازیس روزه آ</h1>
+      </div>
+    </div>
+    <a href="../categories/پوست-و-مو.html" class="btn-back">← بازگشت به پوست و مو</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><span dir="LTR" style="mso-bidi-language:
+FA">Pityriasis Rosea</span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">Rx</span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">1.</span><span style="mso-bidi-language:FA">Oint Hydrocortisone 1% N=1<span style="mso-spacerun:yes">  </span><span style="color:#00B050">q12h</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">Or</span><span style="mso-bidi-language:FA"> Oint Betamethasone N=1 <span style="color:#00B050">q12h</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">2.</span><span style="mso-bidi-language:FA">Tab Hydroxyzine<span style="mso-spacerun:yes">  </span>N=30 <span style="color:#00B050">q8h</span></span></p><p alignment="left"><b><span style="color:red;
+mso-bidi-language:FA">IF Need : </span></b></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">3.</span><span style="mso-bidi-language:FA">Tab Prednisolone 20mg N=20 <span style="color:#00B050">q12h for10day</span></span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";
+color:red;mso-bidi-language:FA'>نکته: </span><span lang="FA" style='font-family:
+"B Nazanin";color:#4472C4;mso-themecolor:accent1;mso-bidi-language:FA'>ضایعات
+خوشخیم پوستی بصورت</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";color:#4472C4;mso-themecolor:
+accent1;mso-bidi-language:FA'><span dir="LTR"></span><span dir="LTR"></span><span style="mso-spacerun:yes">  </span>Herald Patch </span><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;mso-bidi-language:
+FA'>که طی 1-2 ماه خودبخود بهبود میابد.</span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";
+color:red;mso-bidi-language:FA'>نکته: </span><span lang="FA" style='font-family:
+"B Nazanin";color:#4472C4;mso-themecolor:accent1;mso-bidi-language:FA'>درصورت
+شدید بودن علائم میتوتند پردنیزولون خوراکی تجویز کرد. </span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ اگزانتم ویروسی<br/>2️⃣ واکنش دارویی<br/>3️⃣ اریتم مولتی فرم<br/>4️⃣ پسوریازیس guttate<br/>5️⃣ لیکن پلان<br/>6️⃣ درماتبت سبورئیک<br/>7️⃣ تینه آ corporis<br/>8️⃣ تینه آ ورسیکالر<br/>9️⃣ پتریازیس آلبا<br/>🔟 لوپوس پوستی</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_699548ccfe8c.jpg" target="_blank"><img src="../images/img_699548ccfe8c.jpg" alt="پتریازیس روزه آ"></a></div><div class="gallery-card"><a href="../images/img_e1f5c0ac0043.jpg" target="_blank"><img src="../images/img_e1f5c0ac0043.jpg" alt="پتریازیس روزه آ"></a></div><div class="gallery-card"><a href="../images/img_2cd14d816375.jpg" target="_blank"><img src="../images/img_2cd14d816375.jpg" alt="پتریازیس روزه آ"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

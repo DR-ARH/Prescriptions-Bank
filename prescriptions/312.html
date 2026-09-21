@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>واژینیت آتروفیک | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>واژینیت آتروفیک</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_9043fa2f492a.jpg" alt="واژینیت آتروفیک">
+      <div>
+        <h1 class="header-title">واژینیت آتروفیک</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (2)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center">Atrophic Vaginitis</p><p alignment="left"><font style="color: rgb(255, 0, 0);">Rx:</font></p><p alignment="left"><font style="color: rgb(255, 0, 0);">1.</font> Vaginal cream Stromarin <br/></p><p alignment="right">۲-۳ هفته اول هرشب و سپس هفته ای ۲ بار استفاده شود<br/><br/><br/></p><p alignment="left"><font style="color: rgb(255, 0, 0);">2.</font> Emollient cream (Vagisan)</p><p alignment="right">.</p><p alignment="right"><font style="color: rgb(3, 169, 244);">نکته :</font> به بیمار توصیه کنید که کرم استروژن را اطراف مجرای ادرار هم استفاده کند<br/></p><p alignment="right"><font style="color: rgb(3, 169, 244);">نکته : </font>از عوارض استروژن ، تندرنس سینه و تیرگی موضع استفاده از کرم هست که موقتی بوده و پس از قطع دارو بهبود می یابد</p><p alignment="right">.</p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">در خانم های منوپوز یا حوالی آن دیده می شود که به علت کاهش استروژن رخ می دهد.</p><p alignment="right">گاها در دوران شیردهی نیز رخ می دهد<br/><br/></p><p alignment="right"><b><font style="color: rgb(156, 39, 176);">علائم :</font></b></p><p alignment="right">▪️خشکی واژن<br/>▪️دیسپارونی<br/>▪️خونریزی بعد از نزدیکی<br/>▪️دیزوری<br/>▪️فرکوئنسی<br/>▪️UTI مکرر<br/>▪️بی اختیاری ادرار</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ واژینیت باکتریال<br/>2️⃣ واژینیت تریکومونایی<br/>3️⃣ واژینیت قارچی<br/>4️⃣ endometritis<br/>5️⃣ vulvovaginal lichen planus <br/>6️⃣ درماتیت تماسی <br/>7️⃣ STD<br/>8️⃣ نئوپلاسم<br/>9️⃣ UTI</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_85c0386ebd8b.jpg" target="_blank"><img src="../images/img_85c0386ebd8b.jpg" alt="واژینیت آتروفیک"></a></div><div class="gallery-card"><a href="../images/img_7ba7c14ca3e8.jpg" target="_blank"><img src="../images/img_7ba7c14ca3e8.jpg" alt="واژینیت آتروفیک"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

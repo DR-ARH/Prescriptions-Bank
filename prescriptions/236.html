@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>کلیات درمان | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/پوست-و-مو.html">پوست و مو</a>
+    <span>›</span>
+    <span>کلیات درمان</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_3fe83eb0f832.jpg" alt="کلیات درمان">
+      <div>
+        <h1 class="header-title">کلیات درمان</h1>
+      </div>
+    </div>
+    <a href="../categories/پوست-و-مو.html" class="btn-back">← بازگشت به پوست و مو</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;mso-bidi-language:
+FA'>تصمیم به اینکه چه موقع پماد یا لوسیون تجویز کنید بستگی به نوع زخم دارد اگر
+زخم خشک است </span><span lang="FA" style='font-family:"B Nazanin";color:red;
+mso-bidi-language:FA'>پماد یا کرم </span><span lang="FA" style='font-family:"B Nazanin";
+color:#4472C4;mso-themecolor:accent1;mso-bidi-language:FA'>و اگر زخم مرطوب است </span><span lang="FA" style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'>لوسیون
+وکمپرس مرطوب </span><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;
+mso-themecolor:accent1;mso-bidi-language:FA'>تجویزکنید</span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;
+mso-bidi-language:FA'></span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'>ضایعات مرطوب </span><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;
+mso-bidi-language:FA'>مانند وزیکول و تاول و دلمه<span style="mso-spacerun:yes">  </span></span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'>ضایعات خشک </span><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;
+mso-bidi-language:FA'>مانند خشکی پوست، ترک </span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'>ترتیب قدرت جذب
+برروی پوست : </span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;mso-themecolor:accent1;mso-bidi-language:
+FA'>پماد &gt; ژل &gt; کرم &gt; لوسیون</span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'>تفاوت کرم و
+پماد: </span><span lang="FA" style='font-family:"B Nazanin";color:#4472C4;
+mso-themecolor:accent1;mso-bidi-language:FA'>پماد یک ترکیب نیمه جامد و گریسی
+است یعنی چرب است و با شستن با آب پاک نمیشه ولی کرم یک امولسیون آبی روغنی است و
+چون در آن آب بکار رفته، قابل شستشو است</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

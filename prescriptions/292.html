@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>بی خوابی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/روانپزشکی.html">روانپزشکی</a>
+    <span>›</span>
+    <span>بی خوابی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_3af18e9b4630.png" alt="بی خوابی">
+      <div>
+        <h1 class="header-title">بی خوابی</h1>
+      </div>
+    </div>
+    <a href="../categories/روانپزشکی.html" class="btn-back">← بازگشت به روانپزشکی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><span dir="LTR" style="mso-bidi-font-family:Arial;mso-bidi-language:FA"><b>Insomnia</b></span></p><p alignment="left"><span dir="LTR" style="mso-bidi-font-family:Arial;mso-bidi-language:FA">Rx</span></p><p alignment="left"><span style="mso-bidi-font-family:Arial;mso-bidi-language:FA">Tab Zolpidem 10mg<span style="mso-spacerun:yes">  </span>N=30<span style="mso-spacerun:yes">  
+</span>daily</span></p><p alignment="left"><span style="mso-bidi-font-family:Arial;mso-bidi-language:FA">Or Tab Lorazepam
+2mg<span style="mso-spacerun:yes">  </span>N=30<span style="mso-spacerun:yes"> 
+</span>daily </span><span dir="RTL" lang="FA" style='font-family:"Arial",sans-serif;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-language:FA'></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right"><b><font style="color: rgb(255, 19, 0);">1️⃣ بیماری های تنفسی</font></b><font color="#ff1300"><b><br/></b></font>✔️ آپنه انسدادی خواب<br/> ✔️الگو تنفسی شین استوکس<br/><br/><b><font style="color: rgb(255, 19, 0);">2️⃣ دارو ها</font></b><font color="#ff1300"><b><br/></b></font>✔️ محرک CNS : ریتالین<br/>✔️ ضد فشار خون : آلفا و بتا بلاکر ها<br/>✔️ضد احتقان : فنیل افرین و سودوافدربن<br/>✔️ تنفسی : تئوفیلین<br/>✔️ ضد تشنج : لاموتریژین</p><p alignment="right"><br/>3️⃣ <b><font style="color: rgb(255, 19, 0);">مواد</font></b></p><p alignment="right">✔️کافئین<br/>✔️الکل<br/>✔️نیکوتین<br/><br/>4️⃣ افسردگی</p><p alignment="right"><br/>5️⃣ سندرم پای بی قرار</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

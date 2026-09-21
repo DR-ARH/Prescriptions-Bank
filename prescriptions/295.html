@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>سنذوم پای بی قرار | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/روانپزشکی.html">روانپزشکی</a>
+    <span>›</span>
+    <span>سنذوم پای بی قرار</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_915d415b5d93.jpg" alt="سنذوم پای بی قرار">
+      <div>
+        <h1 class="header-title">سنذوم پای بی قرار</h1>
+      </div>
+    </div>
+    <a href="../categories/روانپزشکی.html" class="btn-back">← بازگشت به روانپزشکی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><span dir="LTR" style="mso-bidi-language:FA"><b>Restless
+Legs</b></span></p><p alignment="right"><span lang="FA" style='font-family:"Arial",sans-serif;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-bidi;
+mso-bidi-language:FA'>چک کنین بیمارتون فقرآهن نداشته باشد. ( مدنظر داشته باشن فرتین باید بالای ۷۵ باشه)  توصیه‌هایی که
+میتونین داشته باشین مانند رعایت بهداشت خواب، ماساژ،<span style="mso-spacerun:yes">  </span>دوش آب گرم قبل از خواب، محیط خنک و آرام<span style="mso-spacerun:yes"> ،ماساژ  </span>و در نهایت درمان دارویی : </span><span dir="LTR" style="mso-bidi-language:FA"></span></p><p alignment="left"><span style="mso-bidi-language:
+FA">Rx:</span></p><p alignment="left"><span dir="LTR"></span><span style="mso-bidi-language:FA">.Tab Clonazepam 1mg<span style="mso-spacerun:yes">  
+</span>N=30<span style="mso-spacerun:yes">    </span></span><span style="mso-bidi-language:FA"></span></p><p alignment="left">or Tab Pregabalin 50 mg  N=30  </p><p alignment="right"><font style="color: rgb(0, 112, 255);">🔰کلونازپام  برای افرادی که اضطراب دارن بهتره </font></p><p alignment="right"><font style="color: rgb(0, 112, 255);">🔰تمام داروها  دو ساعت قبل خواب مصرف بشه </font></p><p alignment="right"><font style="color: rgb(0, 112, 255);">🔰میتونین گاباپنتین با دوز ۱۰۰-۳۰۰ نیز  تجویز کنید  (اطفال گاباپنتین میشه تجویزکرد)</font></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ آکاتیژی<br/>2️⃣ نوروپاتی<br/>3️⃣ کرامپ شبانه پا<br/>4️⃣ بیماری های عروقی ( واریس و ...)<br/></p><p alignment="right">5️⃣ رادیکولوپاتی<br/>6️⃣ استئوآرتریت</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

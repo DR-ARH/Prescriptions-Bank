@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Globus sensation | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ent.html">ENT</a>
+    <span>›</span>
+    <span>Globus sensation</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_4eb2c39b48ce.png" alt="Globus sensation">
+      <div>
+        <h1 class="header-title">Globus sensation</h1>
+      </div>
+    </div>
+    <a href="../categories/ent.html" class="btn-back">← بازگشت به ENT</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="right"><font style="color: rgb(76, 175, 80);">اصل اول :</font> اطمینان بخشی به بیمار در مورد خوش خیم بودن<br/><font style="color: rgb(76, 175, 80);">اصل دوم :</font> شرح حال گیری و معاینه دقیق و رد علائم خطر :<br/>- درد<br/>- دیسفاژی و اودینوفاژی<br/>- کاهش وزن<br/>- تغییر صدا<br/>- توده یا ادنوپاتی گردنی<br/><font style="color: rgb(76, 175, 80);">اصل سوم</font> : انجام تست های تشخیصی<br/>  <br/><b><font style="color: rgb(0, 112, 255);">درمان</font></b><br/>ابتدا درمان کانزرواتیو با PPI :<br/></p><p alignment="right">Rx<br/></p><p alignment="right">1. Cap Omeprazol 20 mg BD for 6-8 w<br/></p><p alignment="right"><br/>در صورت پایدار ماندن علائم یا همراه بودن با علائم سایکیاتری :<br/></p><p alignment="right">Rx<br/></p><p alignment="right">1. Tab Pantoprazol 40 mg daily for 4w<br/></p><p alignment="right">2.Tab Amitriptyline 25mg daily for 4w<br/><br/><font style="color: rgb(255, 0, 0);">نکته :</font> در صورت پایدار ماندن علائم علی رغم درمان کانزرواتیو یا داشتن علائم خطر ، جهت بررسی بیشتر ارجاع داده شود</p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">GERD 1️⃣ <br/>2️⃣ هرنی هیاتال<br/>3️⃣ آشالازی<br/>4️⃣ Hypertensive Upper esophageal sphincter   <br/>5️⃣ گواتر<br/>6️⃣ کارسینوم قاعده زبان<br/>7️⃣ توده های پارا ازوفاژیال<br/>8️⃣ بزرگ شدن لنف نود گردنی<br/>9️⃣ هایپرپلازی لوزه</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

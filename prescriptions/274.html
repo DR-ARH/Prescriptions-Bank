@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ترومای پا | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ارتوپدی.html">ارتوپدی</a>
+    <span>›</span>
+    <span>ترومای پا</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_6d282e570b0e.jpg" alt="ترومای پا">
+      <div>
+        <h1 class="header-title">ترومای پا</h1>
+      </div>
+    </div>
+    <a href="../categories/ارتوپدی.html" class="btn-back">← بازگشت به ارتوپدی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (4)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>ترومای پا</b></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'>بیشتر
+شکستگی های انگشتان پا بر اثر افتادن جسم سنگین روی پا رخ میدهد برای بررسی آسیب ،
+درخواست گرافی </span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";
+color:red;mso-bidi-language:FA'>AP, Oblique</span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style='font-family:"B Nazanin";color:red;
+mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span> و </span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";color:red;mso-bidi-language:
+FA'>Lateral </span><span dir="RTL"></span><span dir="RTL"></span><span style='font-family:"B Nazanin";color:red;mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes"> </span></span><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'>میدیم .</span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'></span></p><p alignment="right"><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span>1-برای بررسی متاتارس ها<span style="mso-spacerun:yes"> 
+</span>گرافی اوبلیک اهمیت بیشتری دارد</span></p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'>2- در
+سربازان </span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";
+mso-bidi-language:FA'>Stress Fx<span style="mso-spacerun:yes">  </span></span><span dir="RTL"></span><span dir="RTL"></span><span style='font-family:"B Nazanin";
+mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes"> </span><span lang="FA">ب</span></span>ه دنبال ضربات پیاپی در متاتارس
+دوم ایجاد میشود</p><p alignment="right"><span lang="FA" style='font-family:"B Nazanin";mso-bidi-language:FA'>3-اکیموز
+کف پا و<span style="mso-spacerun:yes">  </span>برهم خوردن امتداد خطوط<span style="mso-spacerun:yes">  </span>نشانه ی آسیب </span><span dir="LTR" style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>Lisfranc</span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style='font-family:"B Nazanin";
+mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span> است. </span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_9b11b159a276.jpg" target="_blank"><img src="../images/img_9b11b159a276.jpg" alt="ترومای پا"></a></div><div class="gallery-card"><a href="../images/img_9448dd09f3e4.jpg" target="_blank"><img src="../images/img_9448dd09f3e4.jpg" alt="ترومای پا"></a></div><div class="gallery-card"><a href="../images/img_2e594917d598.jpg" target="_blank"><img src="../images/img_2e594917d598.jpg" alt="ترومای پا"></a></div><div class="gallery-card"><a href="../images/img_9c21c3c104a2.jpg" target="_blank"><img src="../images/img_9c21c3c104a2.jpg" alt="ترومای پا"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

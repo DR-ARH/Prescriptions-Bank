@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>دیابت در بارداری | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>دیابت در بارداری</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_5f954778f96f.png" alt="دیابت در بارداری">
+      <div>
+        <h1 class="header-title">دیابت در بارداری</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (1)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>دیابت در بارداری</b></p><p alignment="right"><span lang="FA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-language:FA'>داروی مجاز در بارداری انسولین است.</span></p><p alignment="left"><span style="mso-bidi-font-family:
+Arial;mso-bidi-language:FA">Rx:</span></p><p alignment="left"><span style="mso-bidi-font-family:
+Arial;mso-bidi-language:FA">1.Vial Insulin Regular<span style="mso-spacerun:yes">  </span>N=4</span></p><p alignment="left"><span style="mso-bidi-font-family:
+Arial;mso-bidi-language:FA">2.Vial Insulin NPH<span style="mso-spacerun:yes"> 
+</span>N= 4 </span></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">✳️Polyuria<br/>✳️Polydipsia<br/>✳️Polyphagia<br/>✳️Unexplained weight loss<br/>✳️fatigue<br/>✳️nausea<br/>✳️blurred vision<br/>✳️Lower-extremity paresthesias<br/>✳️Yeast infections </p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">Diabetic Ketoacidosis (DKA) 1️⃣<br/>Diabetic Nephropathy 2️⃣<br/>Diabetic Foot Ulcers 3️⃣<br/>Insulin Resistance 4️⃣<br/>Lead Nephropathy 5️⃣<br/>Type 1/ 2 Diabetes Mellitus 6️⃣<br/>Diabetes insipidus 7️⃣<br/>Transient hyperglycemia 8️⃣<br/>Cushing syndrome 9️⃣<br/>🔟 RTA 1 <br/>1️⃣1️⃣ سندرم متابولیک<br/>1️⃣2️⃣ عفونت<br/>1️⃣3️⃣ علائم مرتبط با دارو مثل کورتون<br/>1️⃣4️⃣ دیابت تشخیص داده نشده<br/>1️⃣5️⃣ مثبت کاذب ( عدم رعایت fasting)<br/>1️⃣6️⃣ منفی کاذب ( تست زودتر از موعد)</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_0e6cf200043e.jpg" target="_blank"><img src="../images/img_0e6cf200043e.jpg" alt="دیابت در بارداری"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

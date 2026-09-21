@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>شپش | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/پوست-و-مو.html">پوست و مو</a>
+    <span>›</span>
+    <span>شپش</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_733a301b8280.jpg" alt="شپش">
+      <div>
+        <h1 class="header-title">شپش</h1>
+      </div>
+    </div>
+    <a href="../categories/پوست-و-مو.html" class="btn-back">← بازگشت به پوست و مو</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="right">                Pediculosis</p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right"><b><font style="color: rgb(156, 39, 176);">شپش سر</font></b><b><font style="color: rgb(156, 39, 176);"><br/></font></b></p><p alignment="right">1️⃣ شوره سر<br/>2️⃣ کثیف بودن مو ها<br/>3️⃣ استفاده از ژل یا اسپری مو<br/>4️⃣ عفونت درماتوفیتی<br/>5️⃣ درماتیت سبورئیک<br/><br/><br/><b><font style="color: rgb(156, 39, 176);">شپش بدن</font></b><font color="#9c27b0"><b><br/></b></font><font color="#9c27b0"><b><br/></b></font>1️⃣ فولیکولیت<br/>2️⃣ گزش حشرات<br/>3️⃣ گال<br/>4️⃣ آکنه<br/>5️⃣ خشکی پوست همراه excoriations<br/>6️⃣ واکنش دارویی<br/>7️⃣ زرد زخم<br/><br/></p><p alignment="right"><b><font style="color: rgb(156, 39, 176);">شپش عانه</font></b><font color="#9c27b0"><b><br/></b></font><font color="#9c27b0"><b><br/></b></font><b></b>1️⃣عفونت درماتوفیتی<br/>2️⃣فولیکولیت<br/>3️⃣درماتیت تماسی</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_2beb3094a629.jpg" target="_blank"><img src="../images/img_2beb3094a629.jpg" alt="شپش"></a></div><div class="gallery-card"><a href="../images/img_3520733bdc92.jpg" target="_blank"><img src="../images/img_3520733bdc92.jpg" alt="شپش"></a></div><div class="gallery-card"><a href="../images/img_6432e31686d4.jpg" target="_blank"><img src="../images/img_6432e31686d4.jpg" alt="شپش"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>
