@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ENT | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <span>ENT</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_6ea1ac66f33a.svg" alt="ENT">
+      <div>
+        <h1 class="header-title">ENT</h1>
+      </div>
+    </div>
+    <a href="../index.html" class="btn-back">← بازگشت به دسته‌ها</a>
+  </div>
+
+  <input type="text" id="filter" class="search-input" placeholder="جستجو در نسخه‌های ENT..." oninput="filterCards()">
+
+  <div class="grid" id="cardGrid">
+    
+            <a href="../prescriptions/107.html" class="item-card">
+              <img src="../images/img_f78f0054bbbd.jpg" alt="آفت">
+              <h3>آفت</h3>
+            </a>
+            
+            <a href="../prescriptions/108.html" class="item-card">
+              <img src="../images/img_17ec9fd6c719.jpg" alt="اوتیت اکسترن">
+              <h3>اوتیت اکسترن</h3>
+            </a>
+            
+            <a href="../prescriptions/109.html" class="item-card">
+              <img src="../images/img_8cc5d99a1882.jpg" alt="اوتیت مدیا">
+              <h3>اوتیت مدیا</h3>
+            </a>
+            
+            <a href="../prescriptions/110.html" class="item-card">
+              <img src="../images/img_9bb873bf52e3.jpg" alt="اتومایکوزیس">
+              <h3>اتومایکوزیس</h3>
+            </a>
+            
+            <a href="../prescriptions/111.html" class="item-card">
+              <img src="../images/img_b01a5eb718ae.jpg" alt="اپیستاکسی">
+              <h3>اپیستاکسی</h3>
+            </a>
+            
+            <a href="../prescriptions/112.html" class="item-card">
+              <img src="../images/img_79937109dc7c.jpg" alt="جسم خارجی">
+              <h3>جسم خارجی</h3>
+            </a>
+            
+            <a href="../prescriptions/113.html" class="item-card">
+              <img src="../images/img_df04e7e87b5e.jpg" alt="بیماری حرکت">
+              <h3>بیماری حرکت</h3>
+            </a>
+            
+            <a href="../prescriptions/114.html" class="item-card">
+              <img src="../images/img_0a1bead484f4.jpg" alt="سینوزیت حاد">
+              <h3>سینوزیت حاد</h3>
+            </a>
+            
+            <a href="../prescriptions/115.html" class="item-card">
+              <img src="../images/img_26b9e4ef9c3b.jpg" alt="سرگیجه">
+              <h3>سرگیجه</h3>
+            </a>
+            
+            <a href="../prescriptions/116.html" class="item-card">
+              <img src="../images/img_91a5c4035772.jpg" alt="جرم گوش">
+              <h3>جرم گوش</h3>
+            </a>
+            
+            <a href="../prescriptions/117.html" class="item-card">
+              <img src="../images/img_52a52352aa2e.jpg" alt="سکسکه">
+              <h3>سکسکه</h3>
+            </a>
+            
+            <a href="../prescriptions/118.html" class="item-card">
+              <img src="../images/img_8182e1e4a5e8.jpg" alt="گرفتگی بینی">
+              <h3>گرفتگی بینی</h3>
+            </a>
+            
+            <a href="../prescriptions/119.html" class="item-card">
+              <img src="../images/img_a091c308e8b3.jpg" alt="منیر">
+              <h3>منیر</h3>
+            </a>
+            
+            <a href="../prescriptions/120.html" class="item-card">
+              <img src="../images/img_95e2242b3fba.jpg" alt="ماستوئیدیت">
+              <h3>ماستوئیدیت</h3>
+            </a>
+            
+            <a href="../prescriptions/299.html" class="item-card">
+              <img src="../images/img_4eb2c39b48ce.png" alt="Globus sensation">
+              <h3>Globus sensation</h3>
+            </a>
+            
+            <a href="../prescriptions/302.html" class="item-card">
+              <img src="../images/img_202504a9e428.jpg" alt="لارنژیت حاد">
+              <h3>لارنژیت حاد</h3>
+            </a>
+            
+            <a href="../prescriptions/306.html" class="item-card">
+              <img src="../images/img_a9f0bef896d9.jpg" alt="میازیس">
+              <h3>میازیس</h3>
+            </a>
+            
+  </div>
+</div>
+
+<script>
+function filterCards() {
+  const q = document.getElementById('filter').value.toLowerCase().trim();
+  document.querySelectorAll('.item-card').forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>
