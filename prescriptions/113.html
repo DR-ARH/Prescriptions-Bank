@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>بیماری حرکت | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ent.html">ENT</a>
+    <span>›</span>
+    <span>بیماری حرکت</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_df04e7e87b5e.jpg" alt="بیماری حرکت">
+      <div>
+        <h1 class="header-title">بیماری حرکت</h1>
+      </div>
+    </div>
+    <a href="../categories/ent.html" class="btn-back">← بازگشت به ENT</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><mark style="background-color: rgb(255, 191, 0);"></mark>Motion Sickness<span dir="LTR" style="mso-bidi-language:FA"></span></p><p alignment="left"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;mso-fareast-font-family:"Times New Roman";color:red'>Rx</span></p><p alignment="left"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;mso-fareast-font-family:"Times New Roman";color:red'>1.</span><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;mso-fareast-font-family:
+"Times New Roman"'>Tab Dimenhydrinate 50mg<span style="mso-spacerun:yes">  
+</span>N=10</span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL" lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
+"Times New Roman";mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi'><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes">   </span></span></p><p alignment="left"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;mso-fareast-font-family:"Times New Roman";color:red'>Or</span><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;mso-fareast-font-family:
+"Times New Roman"'> Tab Diphenhydramine 25mg<span style="mso-spacerun:yes"> 
+</span>N=10 </span></p><p alignment="right"><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;
+line-height:107%;font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-bidi;color:#00B050'>نیم ساعت قبل<span style="mso-spacerun:yes">  </span>حرکت و هر 4-6 ساعت</span><span lang="FA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:#00B050;
+mso-bidi-language:FA'></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">CVA 1️⃣ <br/>2️⃣ تروما به سر<br/>3️⃣ میگرن وستیبولار<br/>4️⃣ سرگیجه BPPV<br/>5️⃣ نوریت وستیبولار<br/>Dehydration 6️⃣<br/>7️⃣ هایپوگلایسمی<br/>8️⃣ مسمومیت<br/>9️⃣ اختلال اضطرابی<br/>🔟 افسردگی</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

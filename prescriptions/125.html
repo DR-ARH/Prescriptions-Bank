@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>برادی کاردی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/قلب-و-عروق.html">قلب و عروق</a>
+    <span>›</span>
+    <span>برادی کاردی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_3b4e64f719c3.jpg" alt="برادی کاردی">
+      <div>
+        <h1 class="header-title">برادی کاردی</h1>
+      </div>
+    </div>
+    <a href="../categories/قلب-و-عروق.html" class="btn-back">← بازگشت به قلب و عروق</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>برادی کاردی</b></p><p alignment="left">      Amp Atropine 0.5mg IV Repeat q5min<span style="mso-spacerun:yes">  </span>(max 3mg)       <br/></p><p alignment="right"><br/></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">به ضربان قلب کمتر از ۶۰ تا در دقیقه در بزرگسالان برادی کاردی گفته میشود<br/></p><p alignment="center"><font style="color: rgb(255, 19, 0);"><b>علل برادی کاردی</b></font></p><p alignment="right"><br/><br/>●Cardiac disease<br/>🔸Myocardial ischaemia / infarction<br/>🔸Myocarditis<br/>🔸Congenital disorders<br/>🔸Cardiomyopathies<br/>🔸His-Purkinje fibre degeneration<br/><br/>●Hypoxia<br/><br/>●Electrolyte disturbance (e.g. hyperkalemia)<br/><br/>●Medications, poisonings and toxic exposures (e.g. digoxin, beta blockers, calcium channel blockers, amiodarone, clonidine, organophosphates)<br/><br/>●Hypothermia<br/><br/>●Hypothyroidism<br/><br/>●Raised intracranial pressure (Cushing response)<br/><br/>●Infections (e.g. Lyme disease, diphtheria, typhoid fever)<br/><br/>●Autoimmune (e.g. systemic lupus erythematosis)<br/><br/>●Infiltrative disorders (e.g. sarcoidosis, amyloidosis)<br/><br/>●Physiological causes (e.g. athletes, vagal stimuli)</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="center"><font style="color: rgb(255, 19, 0);"><b>Types of bradycardia</b></font></p><p alignment="left"><b><font style="color: rgb(156, 39, 176);">Narrow complex bradydysrhythmias</font></b><br/><br/><b><font style="color: rgb(76, 175, 80);">Regular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Sinus bradycardia🔸<br/>Junctional bradycardia🔸<br/>Complete AV block (junctional escape)🔸<br/>Atrial flutter with high degree block🔸<br/><br/><b><font style="color: rgb(76, 175, 80);">Irregular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Sinus arrhythmia, pause or arrest🔸<br/>Sinoatrial exit block (second degree)🔸<br/>AF with slow ventricular response🔸<br/>Atrial flutter with variable block🔸<br/>Second degree AV block, type I🔸<br/>Second degree AV block, type II🔸<br/><br/><br/><b><font style="color: rgb(156, 39, 176);">Wide complex bradydysrhythmias</font></b><br/><br/><b><font style="color: rgb(76, 175, 80);">Regular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Idioventricular rhythm🔹<br/>Complete AV block (ventricular escape)🔹<br/>Sinoventricular rhythm🔹<br/>Regular bradycardias with aberrancy or BBB🔹<br/><br/><b><font style="color: rgb(76, 175, 80);">Irregular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Second degree AV block, type I🔹<br/>Second degree AV block, type II🔹<br/>Sinoatrial exit block (second degree) with BBB🔹<br/>Irregular bradycardias with BBB🔹</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

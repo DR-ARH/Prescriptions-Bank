@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>فییریلاسیون دهلیزی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/قلب-و-عروق.html">قلب و عروق</a>
+    <span>›</span>
+    <span>فییریلاسیون دهلیزی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_907b6a270d6d.jpg" alt="فییریلاسیون دهلیزی">
+      <div>
+        <h1 class="header-title">فییریلاسیون دهلیزی</h1>
+      </div>
+    </div>
+    <a href="../categories/قلب-و-عروق.html" class="btn-back">← بازگشت به قلب و عروق</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>فییریلاسیون دهلیزی</b></p><p alignment="right"><span lang="AR-SA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi'>در بیماران </span><span dir="LTR">Unstable </span><span lang="AR-SA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi'>کاردیوورژن
+سینکرونایز با </span><span lang="FA" style='font-family:"Arial",sans-serif;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA'>۱۲۰-۲۰۰</span><span dir="LTR">j</span></p><p alignment="left">Amp Heparin 5000u stat then 1000u/h inf</p><p alignment="left">Amp Diltiazem 20mg IV Over 2min</p><p alignment="left">Or Amp Verapamil 5mg Over 2min if need after 15min 5mg Over
+2min</p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="center"><font style="color: rgb(255, 19, 0);"><b>ECG Features of Atrial Fibrillation</b></font></p><p alignment="left">Irregularly irregular rhythm▪️<br/><br/>No P waves▪️<br/><br/>Absence of an isoelectric baseline▪️<br/><br/>Variable ventricular rate▪️<br/><br/>QRS complexes usually &lt; 120ms, unless pre-existing bundle branch block, accessory pathway, or rate-related aberrant conduction▪️<br/><br/>Fibrillatory waves may be present and can be either fine (amplitude &lt; 0.5mm) or coarse (amplitude &gt; 0.5mm)▪️<br/><br/>Fibrillatory waves may mimic P waves leading to misdiagnosis▪️<br/><br/></p><p alignment="left"><b><font style="color: rgb(255, 19, 0);">Causes of Atrial Fibrillation</font></b><br/><br/>Ischaemic heart disease🔹<br/>Hypertension🔹<br/>Valvular heart disease 🔹<br/>Acute infections🔹<br/>Electrolyte disturbance 🔹<br/>Thyrotoxicosis🔹<br/>Drugs (e.g. sympathomimetics)🔹<br/>Alcohol🔹<br/>Pulmonary embolus🔹<br/>Pericardial disease🔹<br/>Acid-base disturbance🔹<br/>Pre-excitation syndromes🔹<br/>Cardiomyopathies🔹<br/>Phaeochromocytoma🔹</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">Atrial flutter 1️⃣ <br/>Atrial tachycardia 2️⃣<br/>Multifocal atrial tachycardia 3️⃣<br/>Wolf-Parkinson-White syndrome 4️⃣<br/>AVNRT 5️⃣</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_a202cb003ff6.jpg" target="_blank"><img src="../images/img_a202cb003ff6.jpg" alt="فییریلاسیون دهلیزی"></a></div><div class="gallery-card"><a href="../images/img_028396c096fc.jpg" target="_blank"><img src="../images/img_028396c096fc.jpg" alt="فییریلاسیون دهلیزی"></a></div><div class="gallery-card"><a href="../images/img_d2d2b40880be.jpg" target="_blank"><img src="../images/img_d2d2b40880be.jpg" alt="فییریلاسیون دهلیزی"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

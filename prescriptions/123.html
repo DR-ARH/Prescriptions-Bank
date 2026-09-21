@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>تپش قلب | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/قلب-و-عروق.html">قلب و عروق</a>
+    <span>›</span>
+    <span>تپش قلب</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_c0e42732ca44.jpg" alt="تپش قلب">
+      <div>
+        <h1 class="header-title">تپش قلب</h1>
+      </div>
+    </div>
+    <a href="../categories/قلب-و-عروق.html" class="btn-back">← بازگشت به قلب و عروق</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;mso-fareast-font-family:
+"Times New Roman"'>Palpitation</span></p><p alignment="left"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;mso-fareast-font-family:"Times New Roman"'>Rx</span></p><p alignment="left"><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+line-height:107%;mso-fareast-font-family:"Times New Roman"'>1-Tab Propranolol
+10mg bd</span></p><p alignment="left"><span dir="LTR" style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:107%;mso-fareast-font-family:"Times New Roman"'>Or Tab
+Metoprolol 50mg 1/2tab. bd</span></p><p alignment="right"><span lang="AR-SA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi'>و ارجاع به متخصص قلب جهت بررسی بیشتر مدنظر داشته باشین.</span><span dir="LTR" style="font-size:10.0pt;mso-bidi-font-size:11.0pt;line-height:107%"></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="center"><b><font style="color: rgb(255, 19, 0);">Types of tachycardia</font></b></p><p alignment="left"><b><font style="color: rgb(156, 39, 176);">Narrow complex tachycardias</font></b><b><font style="color: rgb(156, 39, 176);"><br/></font></b><br/><b><font style="color: rgb(76, 175, 80);">Regular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Sinus tachycardia▪️<br/>Atrial tachycardia▪️<br/>Atrial flutter▪️<br/>Supraventricular tachycardia▪️<br/>AVNRT▪️<br/>Orthodromic AVRT▪️<br/>Narrow complex VT (fascicular tachycardia)▪️<br/><br/><br/><b><font style="color: rgb(76, 175, 80);">Irregular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Tachycardia with PACs, PJCs, PVCs▪️<br/>Atrial fibrillation▪️<br/>Atrial flutter with variable block▪️<br/>Atrial tachycardia with variable block▪️<br/>Multifocal atrial tachycardia▪️<br/>Paroxysmal atrial tachycardia▪️<br/>Digoxin toxicity▪️<br/><br/><br/><b><font style="color: rgb(156, 39, 176);">Wide complex tachycardias</font></b><b><font style="color: rgb(156, 39, 176);"><br/></font></b><br/><b><font style="color: rgb(76, 175, 80);">Regular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Monomorphic VT▪️<br/>Ventricular flutter▪️<br/>Antidromic AVRT▪️<br/>Pacemaker tachycardia▪️<br/>Accelerated idioventricular rhythm ▪️<br/>Sodium channel blocker toxicity (e.g. tricyclic antidepressants, cocaine)▪️<br/>Hyperkalemia▪️<br/>Post-electrical cardioversion▪️<br/>Ischaemia▪️<br/>Regular tachycardia with aberrancy, bundle branch block or pre-excitation syndromes▪️<br/><br/><b><font style="color: rgb(76, 175, 80);">Irregular</font></b><b><font style="color: rgb(76, 175, 80);"><br/></font></b>Polymorphic VT (torsades de pointes)▪️<br/>Irregular VT▪️<br/>Ventricular fibrillation▪️<br/>Irregular tachycardia with aberrancy, bundle branch block or pre-excitation syndromes▪️<br/>Atrial fibrillation or flutter with pre-excitation syndromes▪️</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>جرم گوش | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ent.html">ENT</a>
+    <span>›</span>
+    <span>جرم گوش</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_91a5c4035772.jpg" alt="جرم گوش">
+      <div>
+        <h1 class="header-title">جرم گوش</h1>
+      </div>
+    </div>
+    <a href="../categories/ent.html" class="btn-back">← بازگشت به ENT</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><mark style="background-color: rgb(255, 191, 0);"></mark><b>Ear wax</b></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">Rx</span><br/><font color="#ff0000"><br/></font><font style="color: rgb(255, 19, 0);">1.</font>Otic drop Glycerin pheniqe  N=1  q8h 3 drop for 1w   <br/><br/><br/></p><p alignment="right"><br/><font style="color: rgb(3, 169, 244);">نکته 1 : </font>قطره فوق سبب نرم شدن جرم داخل گوش میشود<br/><br/><font style="color: rgb(3, 169, 244);">نکته 2 :</font> بعد از مصرف قطره فوق مراجعه به متخصص گوش جهت ساکشن کردن<br/><br/></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">✳️ احساس پری و فولنس در گوش <br/>✳️ درد گوش<br/>✳️ کاهش شنوایی<br/>✳️ وزوز گوش<br/>✳️ خارش<br/>✳️ ترشح گوش<br/>✳️ سرگیجه</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ جسم خارجی<br/>2️⃣ پرفوراسیون پرده تیمپان<br/>3️⃣ اوتیت اکسترن<br/>4️⃣ کلستئاتوم<br/>5️⃣ هماتوم<br/>6️⃣ تومور<br/>7️⃣ فولیکولیت یا فرونکلوز کانل گوش<br/>8️⃣ درماتیت <br/>9️⃣ خراشیدگی کانال گوش</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_b11aa977c9c9.jpg" target="_blank"><img src="../images/img_b11aa977c9c9.jpg" alt="جرم گوش"></a></div><div class="gallery-card"><a href="../images/img_8d96bfd9af07.jpg" target="_blank"><img src="../images/img_8d96bfd9af07.jpg" alt="جرم گوش"></a></div><div class="gallery-card"><a href="../images/img_0834cad53d7f.jpg" target="_blank"><img src="../images/img_0834cad53d7f.jpg" alt="جرم گوش"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

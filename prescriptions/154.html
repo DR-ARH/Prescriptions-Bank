@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>شانکرویید | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اورولوژی.html">اورولوژی</a>
+    <span>›</span>
+    <span>شانکرویید</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_9426ae5fef44.jpg" alt="شانکرویید">
+      <div>
+        <h1 class="header-title">شانکرویید</h1>
+      </div>
+    </div>
+    <a href="../categories/اورولوژی.html" class="btn-back">← بازگشت به اورولوژی</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (1)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><mark style="background-color: rgb(255, 191, 0);"></mark><b>Chancroid</b></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">Rx </span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">1.</span><span style="mso-bidi-language:FA">Amp Ceftriaxone 250mg<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">  </span><span style="color:#538135;mso-themecolor:accent6;mso-themeshade:191">single
+dose<span style="mso-spacerun:yes">  </span>IM</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">Or </span><span style="mso-bidi-language:FA">Tab Azithromycin 1g<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">   </span><span style="color:#538135;mso-themecolor:accent6;mso-themeshade:191">single dose</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:
+FA">Or</span><span style="mso-bidi-language:FA"> Tab Eythromycin 400mg<span style="mso-spacerun:yes">  </span>N=28<span style="mso-spacerun:yes">   </span><span style="color:#538135;mso-themecolor:accent6;mso-themeshade:191">q6h</span></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ سیفلیس <br/>herpes simplex infection 2️⃣<br/>3️⃣ سندرم بهجت<br/>4️⃣ لنفوگرانولوم ونروم<br/>5️⃣ پسوریازیس<br/>Fixed drug eruption 6️⃣<br/>Donovanosis 7️⃣<br/>8️⃣ تروما</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_2a3c5fdf4c59.jpg" target="_blank"><img src="../images/img_2a3c5fdf4c59.jpg" alt="شانکرویید"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>
