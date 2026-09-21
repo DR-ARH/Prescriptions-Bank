@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>اوتیت مدیا | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/ent.html">ENT</a>
+    <span>›</span>
+    <span>اوتیت مدیا</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_8cc5d99a1882.jpg" alt="اوتیت مدیا">
+      <div>
+        <h1 class="header-title">اوتیت مدیا</h1>
+      </div>
+    </div>
+    <a href="../categories/ent.html" class="btn-back">← بازگشت به ENT</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (5)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><mark style="background-color: rgb(255, 191, 0);"></mark>Otitis Media<span lang="FA" style='font-family:
+"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-bidi;mso-bidi-language:FA'></span></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">Rx:</span></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">1.</span><span style="mso-bidi-language:FA">Tab Co-Amoxiclave 625mg N=30 <span style="color:#00B050">q8h for 10days</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">Or</span><span style="mso-bidi-language:FA"> (in Penicillin Allergy) Cap Azithromycin 250mg
+N=6 <span style="color:#00B050">1st day 2 cap then 1cap daily</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">2.</span><span style="mso-bidi-language:FA"> Tab Acetaminophen 500 N=20 <span style="color:#00B050">q8h PRN</span></span></p><p alignment="left"><span style="color:red;mso-bidi-language:FA">3.</span><span style="mso-bidi-language:FA"> Syrup Pseudoephedrine N=1<span style="mso-spacerun:yes">  </span><span style="color:#00B050">5cc q8h </span></span></p><p alignment="right"><span lang="FA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;color:red;mso-bidi-language:FA'>نکته1: </span><span lang="FA" style='font-family:"Arial",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:#4472C4;
+mso-themecolor:accent1;mso-bidi-language:FA'>در صورت تداوم و تشدید درد و تب جهت
+پاراسنتز گوش میانی به متخصص ارجاع شود</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ سینوزیت حاد<br/>2️⃣ فارنژیت<br/>3️⃣ ماستوئیدیت<br/>4️⃣ اوتیت اکسترن<br/>5️⃣ کلستئاتوم<br/>6️⃣ دندان درد<br/>7️⃣ درد مفصل TMJ<br/>8️⃣ تروما به گوش</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_ef2ae0bc3105.jpg" target="_blank"><img src="../images/img_ef2ae0bc3105.jpg" alt="اوتیت مدیا"></a></div><div class="gallery-card"><a href="../images/img_27b359f8f3a7.jpg" target="_blank"><img src="../images/img_27b359f8f3a7.jpg" alt="اوتیت مدیا"></a></div><div class="gallery-card"><a href="../images/img_6ae0953f8461.jpg" target="_blank"><img src="../images/img_6ae0953f8461.jpg" alt="اوتیت مدیا"></a></div><div class="gallery-card"><a href="../images/img_e9ad394ff205.png" target="_blank"><img src="../images/img_e9ad394ff205.png" alt="اوتیت مدیا"></a></div><div class="gallery-card"><a href="../images/img_6703d3e61ae7.jpg" target="_blank"><img src="../images/img_6703d3e61ae7.jpg" alt="اوتیت مدیا"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

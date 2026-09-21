@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>تشنج | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>تشنج</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_1cd575514fc0.jpg" alt="تشنج">
+      <div>
+        <h1 class="header-title">تشنج</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (1)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b><span dir="LTR" lang="EN" style="font-size:14.0pt;
+line-height:115%;color:red">Seizure</span></b></p><p alignment="left"><span dir="LTR" lang="EN" style="color:red">Rx</span><span dir="LTR" lang="EN" style='font-size:16.0pt;line-height:115%;font-family:"Calibri",sans-serif;
+mso-fareast-font-family:Calibri;mso-bidi-font-family:Arial;color:red;
+mso-bidi-language:FA'></span></p><p alignment="left"><span lang="EN" style="color:red">1.</span><span lang="EN">Amp
+Diazepam <span style="mso-spacerun:yes"> </span></span></p><p alignment="left"><span lang="EN" style="color:#00B050">0.5mg/kg Rectal or Nasal<span style="mso-spacerun:yes">  </span>if need up to 3 time</span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL" lang="AR-SA" style="color:#00B050"><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes">  </span></span><span lang="EN" style="color:#00B050"></span></p><p alignment="left"><span lang="EN" style="color:red">Or </span><span lang="EN" style="color:#4F81BD;mso-themecolor:accent1">Amp Diazepam </span><span lang="EN" style="color:#00B050">0.2mg/kg IV</span><span lang="EN"></span></p><p alignment="left"><span lang="EN" style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;line-height:115%;mso-fareast-font-family:"Times New Roman";color:red'>Or</span><span lang="EN" style='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:115%;
+mso-fareast-font-family:"Times New Roman"'> <span style="color:#4F81BD;
+mso-themecolor:accent1">Amp Midazolam </span><span style="color:#00B050">0.2mg/kg
+Nasal</span></span></p><p alignment="right"><span lang="AR-SA" style='mso-ansi-font-size:12.0pt;line-height:115%;
+mso-fareast-font-family:"Times New Roman"'>در صورت عدم کنترل به ترتیب از
+داروهای زیر استفاده میکنیم. </span><span dir="LTR" lang="EN" style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;line-height:115%;mso-fareast-font-family:"Times New Roman"'></span></p><p alignment="left"><span dir="LTR" lang="EN">Amp Phenytoin <span style="color:
+#00B050">20mg/kg in NS</span></span><span dir="LTR" lang="EN" style="font-size:
+10.0pt;mso-bidi-font-size:11.0pt;line-height:115%"></span></p><p alignment="left"><span lang="EN" style="color:red">Next:</span><span lang="EN">
+Amp Phenobarbital <span style="color:#00B050">20mg/kg</span></span></p><p alignment="right"><span lang="FA" style="color:black;mso-themecolor:text1;mso-bidi-language:
+FA">همچنین به دنبال علت تشنج باشید</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">Pseudoseizure 1️⃣ <br/>Motor automatisms 2️⃣ <br/>Jitteriness 3️⃣<br/>SAH 4️⃣<br/>SDH 5️⃣<br/>Breath holding spells 6️⃣ (ریسه)<br/>Syncope 7️⃣<br/>Long QT sx 8️⃣ <br/>Parasomnias 9️⃣ <br/>🔟 GERD <br/>Daydreaming 1️⃣1️⃣<br/>Panic disorder 1️⃣2️⃣<br/>1️⃣3️⃣ مننژیت<br/>1️⃣4️⃣ انسفالیت</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_0cb2c25666bb.jpg" target="_blank"><img src="../images/img_0cb2c25666bb.jpg" alt="تشنج"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

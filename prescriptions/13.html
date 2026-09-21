@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>آفت | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>آفت</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_24ea3a94ac10.jpg" alt="آفت">
+      <div>
+        <h1 class="header-title">آفت</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (2)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><font style="color: rgb(255, 19, 0);"></font><font style="color: rgb(255, 19, 0);"></font><b>Aphthous</b><span dir="LTR" lang="EN" style="color:red"></span></p><p alignment="left"><span lang="EN" style="color:red">Rx</span></p><p alignment="left"><span lang="EN" style="color:red">1.</span><span lang="EN">Oint
+Teriadent 0.1 %<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">  </span></span></p><ul alignment="right"><li alignment="right">چند بار در روز روی آفت زده بشه</li></ul><p alignment="right"><span lang="AR-SA" style='font-size:13.0pt;line-height:115%;font-family:
+"B Nazanin";color:#0070C0'>یا استفاده از مخلوط شربت دیفن هیدرامین ساده</span></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right"><font style="color: rgb(255, 19, 0);"></font><b>آفت </b><font style="color: rgb(255, 19, 0);">یک ضایعه منفرد وسطحی است که یک هاله قرمز رنگ پیرامون
+آن را در برگرفته است.</font></p><p alignment="right"><span lang="FA" style='font-size:12.0pt;mso-ansi-font-size:10.0pt;font-family:"B Nazanin";
+mso-bidi-language:FA'> علل مختلفی همچون تروما(مسواک،گاز گرفتن،) عفونت های هرپسی
+و بهداشت پایین دهان،کمبود آهن،فولات و ویتامین </span><span dir="LTR" style="mso-bidi-language:FA">B12</span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style='font-size:12.0pt;mso-ansi-font-size:10.0pt;font-family:"B Nazanin";
+mso-bidi-language:FA'><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes">  </span>. مصرف دارو مانند کاپتوپریل دارد.<span style="mso-spacerun:yes">  </span>بیمارانی که با شکایت آفت دهانی مراجعه میکنند
+شرح حال عود مکرر و معاینه جهت تایید تشخیص انجام بدهید. در صورت عود مکرر یا
+تشخیص غیر از آفت (مثلا زخم طول کشیده)<span style="mso-spacerun:yes"> 
+</span>ارجاع بدهید زیرا ممکن است نشانه ی یک بیماری زمینه ای باشد.</span></p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ زخم تروماتیک موضعی.<br/>2️⃣ محرک های غذایی ( گوجه فرنگی ، لیمو ، سس و ...)</p><p alignment="right">3️⃣ دارو ها ( NSAID و ...)</p><p alignment="right">4️⃣بیماری های روماتولوژیک ( لوپوس ، بهجت و ...)</p><p alignment="right">5️⃣ بیماری های گوارشی ( IBD ، سلیاک و...)</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_99e56af4bafb.jpg" target="_blank"><img src="../images/img_99e56af4bafb.jpg" alt="آفت"></a></div><div class="gallery-card"><a href="../images/img_db01e14b35ad.jpg" target="_blank"><img src="../images/img_db01e14b35ad.jpg" alt="آفت"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

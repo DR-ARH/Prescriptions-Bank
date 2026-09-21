@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>اسپیراسیون جسم خارجی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>اسپیراسیون جسم خارجی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_03a90505f36a.jpg" alt="اسپیراسیون جسم خارجی">
+      <div>
+        <h1 class="header-title">اسپیراسیون جسم خارجی</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (2)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><font style="color: rgb(255, 19, 0);"></font><b>Foreign Body
+Aspiration</b><span lang="FA" style="font-size:14.0pt;line-height:115%;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:Calibri;mso-hansi-font-family:
+Calibri;color:red;mso-bidi-language:FA"></span></p><p alignment="right"><span lang="AR-SA">ابتدا بیمار استیبل کنید و سپس در خواست گرافی بدید
+وباتوجه به محل و نوع جسم خارجی اقدامات لازم انجام بدید</span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red"><span dir="LTR"></span><span dir="LTR"></span>1.</span><span lang="EN">Neck Xray Lateral &amp; AP</span><span dir="RTL" lang="AR-SA"></span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red"><span dir="LTR"></span><span dir="LTR"></span>2.</span><span lang="EN">CXR AP lateral</span></p><p alignment="right"><span lang="AR-SA">در گرافی ممکنه جسم خارجی دیده نشود و رد کننده نیست. شرح
+حال بیشتر کمک کننده است. </span><span dir="LTR" lang="EN"></span></p><p alignment="right"><span lang="AR-SA">تمامی اجسام خارجی با اندوسکوپی</span><span dir="LTR" lang="EN">Rigid. </span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA"><span dir="RTL"></span><span dir="RTL"></span><span style="mso-spacerun:yes"> </span>و برونکوسکوپی باید خارج شود. وجود جسم خارجی
+سبب پنومونی؛ هموپتزی؛ و... میشود</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ پنومونی ( باکتریال ، آسپیراسیون ) <br/>2️⃣ آتلکتازی<br/>3️⃣ COPD<br/>4️⃣ آمفیزم ریوی<br/>5️⃣ پنوموتوراکس<br/>6️⃣ آمبولی ریوی<br/>TB 7️⃣ <br/>8️⃣ برونشیولیت<br/>9️⃣ آسم کودکان<br/></p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_e70d18ec4881.png" target="_blank"><img src="../images/img_e70d18ec4881.png" alt="اسپیراسیون جسم خارجی"></a></div><div class="gallery-card"><a href="../images/img_09ff83a06f86.jpg" target="_blank"><img src="../images/img_09ff83a06f86.jpg" alt="اسپیراسیون جسم خارجی"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

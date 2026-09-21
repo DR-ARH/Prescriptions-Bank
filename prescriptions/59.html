@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>مکمل ها | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>مکمل ها</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_39cd411c6252.jpg" alt="مکمل ها">
+      <div>
+        <h1 class="header-title">مکمل ها</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (0)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><span dir="LTR" lang="EN" style="font-size:12.0pt;
+line-height:115%;color:red">Supplement</span><span lang="AR-SA" style="font-size:
+12.0pt;line-height:115%;color:red"></span></p><p alignment="right"><span lang="FA" style="font-size:12.0pt;line-height:115%;mso-ascii-font-family:
+Calibri;mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;
+color:black;mso-themecolor:text1;mso-bidi-language:FA">باتوجه به شرایط شیرخوار
+یک یا چند مورد زیر را تجویز کنید:</span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red;mso-bidi-language:FA"><span dir="LTR"></span><span dir="LTR"></span>1.</span><span lang="EN" style="mso-bidi-language:FA">Drop Ferrous sulfate<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">   </span><span style="color:#F79646;mso-themecolor:accent6">2w gtt<span style="mso-spacerun:yes">  </span>daily</span></span></p><p alignment="left"><span lang="EN" style="color:red;mso-bidi-language:FA">Or</span><span lang="EN" style="mso-bidi-language:FA"> <span style="color:#4F81BD;mso-themecolor:
+accent1">Syrup Ferrous sulfate<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">   </span></span><span style="color:#F79646;
+mso-themecolor:accent6">w/4cc<span style="mso-spacerun:yes">  </span>daily</span></span></p><p alignment="left"><span lang="EN" style="color:red;mso-bidi-language:FA">2.</span><span lang="EN" style="mso-bidi-language:FA">Drop Vit A-D<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">  </span><span style="color:#00B050">20 gtt daily</span></span><span dir="RTL" lang="FA" style="mso-bidi-language:FA"></span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red;mso-bidi-language:FA"><span dir="LTR"></span><span dir="LTR"></span>3.</span><span lang="EN" style="mso-bidi-language:FA">Syrup Zinc Sulfate<span style="mso-spacerun:yes">  </span>N=1<span style="mso-spacerun:yes">   </span><span style="color:#00B050">2-5cc q12h<span style="mso-spacerun:yes">  </span></span></span></p><p alignment="left"><span lang="EN" style="color:red;mso-bidi-language:FA">Or</span><span lang="EN" style="mso-bidi-language:FA"> <span style="color:#4F81BD;mso-themecolor:
+accent1">Syrup Zinc Gluconate N=1 </span><span style="color:#00B050">2-5cc
+q12h<span style="mso-spacerun:yes">  </span></span></span><span dir="RTL" lang="FA" style="mso-bidi-language:FA"></span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red;mso-bidi-language:FA"><span dir="LTR"></span><span dir="LTR"></span>4.</span><span lang="EN" style="mso-bidi-language:FA">Drop Multi Vit<span style="mso-spacerun:yes">   </span>N=1<span style="mso-spacerun:yes">   
+</span><span style="color:#00B050">25gtt daily</span></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><p style="color: var(--muted); padding: 1rem;">تصویری برای این نسخه موجود نیست.</p></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

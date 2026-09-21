@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>انواژیناسیون | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>انواژیناسیون</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_e3c39529535d.jpg" alt="انواژیناسیون">
+      <div>
+        <h1 class="header-title">انواژیناسیون</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (4)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><font style="color: rgb(255, 19, 0);"></font><b>Intussusception</b></p><p alignment="right"><span lang="AR-SA">معمولا شیرخواران </span><span lang="FA" style="mso-bidi-language:
+FA">۶</span><span lang="AR-SA"> تا </span><span lang="FA" style="mso-bidi-language:
+FA">۳۶</span><span lang="AR-SA"> ماه هستند با درد‌های شدید و کرامپی شکم بصورت
+تکرارشونده ک</span><span lang="FA" style="mso-bidi-language:FA">ه </span><span lang="AR-SA">هر بار حدودا </span><span lang="FA" style="mso-bidi-language:FA">۲۰</span><span lang="AR-SA"> دقیقه طول میکشه؛ و با هر بار تکرار شدیدتر میشود. و بین حملات
+شیرخوار بدون علامت است. درد‌ها همراه با استفراغ و میتونه منجر به مدفوع خونی و
+موکوسی بشه.</span><span dir="LTR" lang="EN"></span></p><p alignment="right"><span lang="AR-SA">در معاینه میتونه توده سوسیسی شکل را لمس کنیم اما نه
+همیشه. </span><span dir="LTR" lang="EN"></span></p><p alignment="right"><span lang="AR-SA">با سونو گرافی میتونیم تشخیصمون رو قطعی کنیم. </span><span dir="LTR" lang="EN"></span></p><p alignment="right"><span lang="AR-SA">و برای درمان بایستی جااندازی بشه. (بسپرین به جراح یا
+متخصص اطفال اگر دارین)</span><span dir="LTR" lang="EN"></span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣آلرژی به شیر<br/>2️⃣هرنی شکمی :هرنی اینکارسره ،هرنی داخلی<br/>3️⃣عللی که انسداد روده میدهند :باند چسبنده<br/>4️⃣ولولوس<br/>5️⃣دیورتیکول مکل<br/>6️⃣کولیک<br/>Cyclic vomiting syndrome7️⃣<br/>8️⃣تورشن بیضه<br/>🔟پرولاپس رکتوم( در موارد نادری که قسمت انواژینه شده از رکتوم بیرون میزند)</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_fdcbade08687.jpg" target="_blank"><img src="../images/img_fdcbade08687.jpg" alt="انواژیناسیون"></a></div><div class="gallery-card"><a href="../images/img_371d4c297086.jpg" target="_blank"><img src="../images/img_371d4c297086.jpg" alt="انواژیناسیون"></a></div><div class="gallery-card"><a href="../images/img_988e92ff7189.jpg" target="_blank"><img src="../images/img_988e92ff7189.jpg" alt="انواژیناسیون"></a></div><div class="gallery-card"><a href="../images/img_90590d941cdf.jpg" target="_blank"><img src="../images/img_90590d941cdf.jpg" alt="انواژیناسیون"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

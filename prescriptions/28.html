@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>بلع جسم خارجی | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/اطفال.html">اطفال</a>
+    <span>›</span>
+    <span>بلع جسم خارجی</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_147722361e1a.jpg" alt="بلع جسم خارجی">
+      <div>
+        <h1 class="header-title">بلع جسم خارجی</h1>
+      </div>
+    </div>
+    <a href="../categories/اطفال.html" class="btn-back">← بازگشت به اطفال</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (5)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><font style="color: rgb(255, 19, 0);"></font><b>swallowed foreign
+body</b></p><p alignment="right"><span lang="AR-SA">ابتدا بیمار استیبل کنید و سپس در خواست گرافی بدید
+وباتوجه به محل و نوع جسم خارجی اقدامات لازم انجام بدید</span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red"><span dir="LTR"></span><span dir="LTR"></span>1.</span><span lang="EN">Neck Xray Lateral &amp; AP</span><span dir="RTL" lang="AR-SA"></span></p><p alignment="left"><span dir="LTR"></span><span dir="LTR"></span><span lang="EN" style="color:red"><span dir="LTR"></span><span dir="LTR"></span>2.</span><span lang="EN">CXR AP lateral</span></p><p alignment="left"><span lang="EN" style="color:red">3.</span><span lang="EN">Abdominal
+Xray</span></p><p alignment="right"><span lang="FA" style="mso-bidi-language:FA">در مواردی لازمه </span><span dir="LTR" lang="EN" style="mso-bidi-language:FA">CT</span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style="mso-bidi-language:FA"><span dir="RTL"></span><span dir="RTL"></span> درخواست کنیم.</span></p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ اپیگلوتیت/سوپراگلوتیت<br/>2️⃣ جسم خارجی تراشه<br/>3️⃣ آبسه پری تونسیلار<br/>HPS 4️⃣<br/>5️⃣ ازوفاژیت<br/>6️⃣ انسداد روده کوچک<br/>7️⃣ انسداد کولون<br/>8️⃣ آپاندیسیت<br/>9️⃣ آسپیراسیون جسم خارجی</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_968844ca421f.jpg" target="_blank"><img src="../images/img_968844ca421f.jpg" alt="بلع جسم خارجی"></a></div><div class="gallery-card"><a href="../images/img_d730a72ba2d1.png" target="_blank"><img src="../images/img_d730a72ba2d1.png" alt="بلع جسم خارجی"></a></div><div class="gallery-card"><a href="../images/img_b9e615de52ab.jpg" target="_blank"><img src="../images/img_b9e615de52ab.jpg" alt="بلع جسم خارجی"></a></div><div class="gallery-card"><a href="../images/img_c72db8728953.jpg" target="_blank"><img src="../images/img_c72db8728953.jpg" alt="بلع جسم خارجی"></a></div><div class="gallery-card"><a href="../images/img_480dc73ad847.jpg" target="_blank"><img src="../images/img_480dc73ad847.jpg" alt="بلع جسم خارجی"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>
