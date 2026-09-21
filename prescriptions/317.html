@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ماستیت | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>ماستیت</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_5b12affd5e2c.jpg" alt="ماستیت">
+      <div>
+        <h1 class="header-title">ماستیت</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>Mastitis</b><br/><br/></p><p alignment="left"><font style="color: rgb(255, 19, 0);">:Rx </font></p><ol alignment="left"><li alignment="left">Cap Cloxacillin 500 mg = 40 qid                            Or Cap Cephalexin 500 mg = 40 qid                    Or Cap Clindamycin 300 mg = 30 TDS</li><li alignment="left">Tab  Acetaminophen or Naproxen mg PRN</li></ol><p alignment="right">.</p><p alignment="right">درمان های غیر دارویی شامل:<br/></p><p alignment="right">▪️کمپرس سرد<br/>▪️عدم قطع شیردهی ( منجر به استاز و تشدید علائم می شود)<br/>▪️خارج کردن شیر با پمپ یا ماساژ دستی<br/>.</p><p alignment="right"><font style="color: rgb(0, 188, 212);">نکته :</font> شیر سالم است و منجر به انتقال عفونت نمی شود<br/><br/></p><p alignment="right"><font style="color: rgb(0, 188, 212);">نکته :</font> در صورت عدم درمان مناسب می تواند منجر به آبسه شود . در صورت شک توصیه به انجام سونوگرافی و ارجاع جهت تخلیه آبسه می شود<br/><br/></p><p alignment="right"><font style="color: rgb(0, 188, 212);">نکته :</font> کلیندامایسین در موارد شدید بیماری توصیه می شود<br/><br/></p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">التهاب بافت پستان ناشی از درگیری میکروبی ( اصولا استاف اورئوس ) .معمولا در ۳ ماه اول شردهی رخ می دهد<br/><br/><font style="color: rgb(156, 39, 176);"><b>علایم</b></font><br/>✳️ درد<br/>✳️ تورم<br/>✳️ قرمزی پستان<br/>✳️ تب <br/>✳️ بی حالی و خستگی<br/>✳️ علائم flu like </p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">Breast Engorgement 1️⃣<br/>2️⃣ آبسه<br/>3️⃣ کنسر التهابی پستان<br/>4️⃣ گالاکتوسل<br/>Plugged duct 5️⃣<br/>Duct ectasia 6️⃣<br/>TB 7️⃣<br/>8️⃣ سارکوئیدوز</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_9974fce87b84.jpg" target="_blank"><img src="../images/img_9974fce87b84.jpg" alt="ماستیت"></a></div><div class="gallery-card"><a href="../images/img_ed33e8ddc1f4.jpg" target="_blank"><img src="../images/img_ed33e8ddc1f4.jpg" alt="ماستیت"></a></div><div class="gallery-card"><a href="../images/img_fdddd8b7f5bd.jpg" target="_blank"><img src="../images/img_fdddd8b7f5bd.jpg" alt="ماستیت"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

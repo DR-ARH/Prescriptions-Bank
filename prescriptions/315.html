@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>شقاق پستان | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/زنان-و-زایمان.html">زنان و زایمان</a>
+    <span>›</span>
+    <span>شقاق پستان</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_c79372470fc9.jpg" alt="شقاق پستان">
+      <div>
+        <h1 class="header-title">شقاق پستان</h1>
+      </div>
+    </div>
+    <a href="../categories/زنان-و-زایمان.html" class="btn-back">← بازگشت به زنان و زایمان</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (2)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center"><b>Nipple fissure</b></p><p alignment="left"><font style="color: rgb(255, 0, 0);">:RX</font></p><ol alignment="left"><li alignment="left">Oint vit A-D qid                                                     Or Topical topical lanolin</li><li alignment="left">Oint mupirocin 2% bd</li></ol><p alignment="right">.</p><p alignment="right">حالتی شایع در مادران شیرده میباشد و گاها به علت تحریک تماسی با لباس در ورژشکاران ( دوندگی یا دوچرخه سواری) دیده میشود<br/><br/></p><p alignment="right"><font style="color: rgb(0, 188, 212);"><b>توصیه های درمانی :</b></font><font color="#00bcd4"><b><br/></b></font><font color="#00bcd4"><b><br/></b></font>▪️آموزش نحوه صحیح شیردهی <br/>▪️پوشاندن نوک سینه با گاز <br/>▪️پرهیز از پوشیدن لباس های با الیاف زبر و نامناسب<br/>▪️پماد های نرم کننده <br/>▪️کمپرس گرم<br/>▪️بعد از شیردهی مقداری شیر دور نیپل مالیده شود و نیپل را خشک نکنند<br/>▪️استفاده از nipple shield</p></div>
+  <div id="tab-signs" class="tab-content"><p alignment="right">✳️ قرمزی<br/>✳️ درد و ناراحتی<br/>✳️ سوزش<br/>✳️ خشکی<br/>✳️ خروج ترشح یا خونریزی</p></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ درماتیت تماسی<br/>2️⃣ اگزما<br/>3️⃣ پسوریازیس<br/>4️⃣ کنسر<br/>5️⃣ بیماری پاژه<br/>Thrush 6️⃣</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_22c516e55abd.jpg" target="_blank"><img src="../images/img_22c516e55abd.jpg" alt="شقاق پستان"></a></div><div class="gallery-card"><a href="../images/img_4904675033e8.jpg" target="_blank"><img src="../images/img_4904675033e8.jpg" alt="شقاق پستان"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>

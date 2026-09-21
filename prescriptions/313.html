@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>پتریازیس آلبا | دانشنامه آفلاین نسخه‌ها</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">نسخه‌ها</a>
+    <span>›</span>
+    <a href="../categories/پوست-و-مو.html">پوست و مو</a>
+    <span>›</span>
+    <span>پتریازیس آلبا</span>
+  </div>
+
+  <div class="page-header">
+    <div class="header-info">
+      <img class="header-icon" src="../images/img_b3843380e354.jpg" alt="پتریازیس آلبا">
+      <div>
+        <h1 class="header-title">پتریازیس آلبا</h1>
+      </div>
+    </div>
+    <a href="../categories/پوست-و-مو.html" class="btn-back">← بازگشت به پوست و مو</a>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('treatment')">درمان</button>
+    <button class="tab-btn" onclick="switchTab('signs')">علائم</button>
+    <button class="tab-btn" onclick="switchTab('ddx')">DDX</button>
+    <button class="tab-btn" onclick="switchTab('gallery')">تصاویر (3)</button>
+  </div>
+
+  <div id="tab-treatment" class="tab-content active"><p alignment="center">Pityriasis alba </p><p alignment="left"><font style="color: rgb(255, 19, 0);">Rx: </font><font color="#ff1300"><br/></font><font style="color: rgb(255, 19, 0);">1.</font> Oint hydrocortisone 1% bd<br/><br/><font style="color: rgb(255, 19, 0);">2.</font> Mild Emollient cream<br/>      Or oint Vit A+D<br/><br/><font style="color: rgb(255, 19, 0);">3.</font> Sunscreen SPF 30<br/></p><p alignment="right">معمولا بدون درمان هم به صورت خود به خود خوب میشن<br/>سایر درمان ها شامل : لیرز ، پسورالن به همراه PUVA ، پماد تاکرولیموس</p><p alignment="right"><br/><font style="color: rgb(3, 169, 244);">نکته ۱:</font> از کورتون ها ضعیف و به مدت محدود استفاده کنید تا دچار عوارض پوستی و آتروفی نشه</p><p alignment="right"><br/><font style="color: rgb(3, 169, 244);">نکته ۲ :</font> به والدین توضیح بدید که ضایعات ظرف چند ماه و به آهستگی خوب میشن و خیلی عجله نداشته باشن<br/><br/><font style="color: rgb(3, 169, 244);">نکته ۳ :</font> نواحی درگیر شده تا حد امکان باید از مواجهه با نور آفتاب محافظت بشن چون تیره شدن پوست ، ضایعات رو واضح تر نشون میده</p></div>
+  <div id="tab-signs" class="tab-content"></div>
+  <div id="tab-ddx" class="tab-content"><p alignment="right">1️⃣ درماتیت آتوپیک<br/>2️⃣ درماتیت تماسی<br/>3️⃣ پسوریازیس<br/>4️⃣ ویتیلیگو<br/>Leprosy 5️⃣<br/>Seborrhea 6️⃣<br/>7️⃣ تینه آ ورسیکالر<br/>8️⃣ تینه آ بدن<br/>9️⃣ پتریازیس روزه آ<br/>🔟 Nevus depigmentosus</p></div>
+  <div id="tab-gallery" class="tab-content"><div class="gallery-grid"><div class="gallery-card"><a href="../images/img_98e12fe0240d.jpg" target="_blank"><img src="../images/img_98e12fe0240d.jpg" alt="پتریازیس آلبا"></a></div><div class="gallery-card"><a href="../images/img_b79763b85d0c.jpg" target="_blank"><img src="../images/img_b79763b85d0c.jpg" alt="پتریازیس آلبا"></a></div><div class="gallery-card"><a href="../images/img_6bb43015639c.jpg" target="_blank"><img src="../images/img_6bb43015639c.jpg" alt="پتریازیس آلبا"></a></div></div></div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  
+  const content = document.getElementById('tab-' + name);
+  if (content) content.classList.add('active');
+  
+  event.target.classList.add('active');
+  history.replaceState(null, null, '#tab=' + name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash || window.location.search;
+  if (hash.includes('signs')) document.querySelectorAll('.tab-btn')[1].click();
+  else if (hash.includes('ddx')) document.querySelectorAll('.tab-btn')[2].click();
+  else if (hash.includes('gallery')) document.querySelectorAll('.tab-btn')[3].click();
+});
+</script>
+</body>
+</html>
